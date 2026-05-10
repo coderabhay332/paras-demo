@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paras Netralaya | Eye Hospital - Giridih, Jharkhand</title>
+    <meta name="description" content="Paras Netralaya - Leading Eye Hospital in Giridih, Jharkhand. Expert cataract surgery, LASIK, pediatric eye care, and comprehensive ophthalmology services.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#03C0B4',
+                        secondary: '#F17732',
+                        dark: '#111821',
+                        darker: '#222831',
+                        light: '#F6F7F8',
+                        lighter: '#F2F4F5',
+                        text: '#141417',
+                        muted: '#6E6E6E'
+                    },
+                    fontFamily: {
+                        sans: ['Segoe UI', 'sans-serif'],
+                        heading: ['Jost', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .fade-left {
+            opacity: 0;
+            transform: translateX(-60px);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .fade-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .scale-in.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .float-anim { animation: float 6s ease-in-out infinite; }
+
+        .gradient-text {
+            background: linear-gradient(0deg, #F0D3BD 0%, #B2E6DF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #03C0B4; border-radius: 4px; }
+
+        .service-card {
+            transition: all 0.4s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(3, 192, 180, 0.25);
+        }
+
+        .organic-mask {
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            transition: all 0.6s ease;
+        }
+        .organic-mask:hover {
+            border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, #F6F7F8 0%, #F2F4F5 50%, #FFFFFF 100%);
+        }
+
+        .btn-primary {
+            background: #03C0B4;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background: #02a89e;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px -10px rgba(3, 192, 180, 0.5);
+        }
+
+        .btn-secondary {
+            background: #F17732;
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background: #e06a25;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px -10px rgba(241, 119, 50, 0.5);
+        }
+
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #03C0B4, transparent);
+        }
+    </style>
+<base target="_blank">
+</head>
+<body class="font-sans text-slate-700 antialiased bg-white overflow-x-hidden">
+
+    <!-- Main Navigation -->
+    <nav id="navbar" class="fixed w-full z-40 transition-all duration-500 bg-white py-0 top-0 shadow-sm transform translate-y-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-[60px]">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <span class="text-xl font-heading font-bold text-text tracking-tight">Paras<span class="text-primary">Netralaya</span></span>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="hidden md:flex items-center gap-6">
+                    <a href="#home" class="text-[15px] font-heading font-medium text-text hover:text-primary transition-colors py-4">Home</a>
+                    <a href="#services" class="text-[15px] font-heading font-medium text-text hover:text-primary transition-colors py-4">Services</a>
+                    <a href="#works" class="text-[15px] font-heading font-medium text-text hover:text-primary transition-colors py-4">Works</a>
+                    <a href="#team" class="text-[15px] font-heading font-medium text-text hover:text-primary transition-colors py-4">Team</a>
+                    <a href="#testimonials" class="text-[15px] font-heading font-medium text-text hover:text-primary transition-colors py-4">Testimonial</a>
+                    <a href="#news" class="text-[15px] font-heading font-medium text-primary transition-colors py-4">News</a>
+                </div>
+
+                <!-- Contact Button -->
+                <div class="hidden md:flex items-center gap-3">
+                    <div class="flex items-center gap-2 text-text">
+                        <i class="fa-solid fa-magnifying-glass text-base"></i>
+                    </div>
+                    <a href="#contact" class="px-6 py-2.5 bg-primary text-white rounded-[30px] text-[15px] font-heading font-medium hover:bg-opacity-90 transition-all">
+                        Contact Us
+                    </a>
+                </div>
+
+                <button id="mobile-menu-btn" class="md:hidden text-text text-2xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl">
+            <div class="px-4 py-6 space-y-4">
+                <a href="#home" class="block text-base font-medium text-text hover:text-primary">Home</a>
+                <a href="#services" class="block text-base font-medium text-text hover:text-primary">Services</a>
+                <a href="#works" class="block text-base font-medium text-text hover:text-primary">Works</a>
+                <a href="#team" class="block text-base font-medium text-text hover:text-primary">Team</a>
+                <a href="#testimonials" class="block text-base font-medium text-text hover:text-primary">Testimonial</a>
+                <a href="#contact" class="block px-6 py-3 bg-primary text-white rounded-[30px] text-center font-medium">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center pt-[60px] overflow-hidden hero-bg">
+        <div class="absolute top-20 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-72 h-72 bg-secondary/10 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-up space-y-8 z-10">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-md border border-primary/10">
+                        <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+                        <span class="text-sm font-medium text-primary">Trusted Eye Care in Giridih</span>
+                    </div>
+
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-heading font-bold leading-tight text-text">
+                        Your Vision<br>
+                        <span class="gradient-text">Our Mission</span>
+                    </h1>
+
+                    <p class="text-lg text-muted leading-relaxed max-w-lg">
+                        Paras Netralaya is Giridih's premier eye care destination, providing advanced ophthalmic treatments with compassion and expertise. Located at Dumri Chowk, Giridih Road, Jamtara.
+                    </p>
+
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contact" class="px-8 py-4 btn-primary text-white rounded-full font-heading font-medium flex items-center gap-2">
+                            <span>Get Appointment</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#services" class="px-8 py-4 bg-white text-primary border-2 border-primary/20 rounded-full font-heading font-medium hover:border-primary hover:bg-primary/5 transition-all flex items-center gap-2">
+                            <i class="fa-solid fa-eye"></i>
+                            <span>Our Services</span>
+                        </a>
+                    </div>
+
+                    <div class="flex items-center gap-8 pt-4">
+                        <div>
+                            <div class="text-3xl font-bold text-slate-900">4.9</div>
+                            <div class="text-sm text-slate-500">Star Rating</div>
+                        </div>
+                        <div class="w-px h-12 bg-slate-200"></div>
+                        <div>
+                            <div class="text-3xl font-bold text-slate-900">500+</div>
+                            <div class="text-sm text-slate-500">Happy Patients</div>
+                        </div>
+                        <div class="w-px h-12 bg-slate-200"></div>
+                        <div>
+                            <div class="text-3xl font-bold text-slate-900">Expert</div>
+                            <div class="text-sm text-slate-500">Eye Surgeons</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative fade-up" style="transition-delay: 0.2s;">
+                    <div class="relative z-10 float-anim">
+                        <img src="https://kimi-web-img.moonshot.cn/img/content3.jdmagicbox.com/9f9631c55f1dd08963cb738dc48bdc383d5d29ff.jpg" 
+                             alt="Paras Netralaya Hospital Building" 
+                             class="w-full max-w-lg mx-auto rounded-3xl shadow-2xl object-cover h-[500px]">
+
+                        <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3">
+                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600">
+                                <i class="fa-solid fa-shield-heart text-xl"></i>
+                            </div>
+                            <div>
+                                <div class="text-sm font-bold text-slate-900">Trusted Care</div>
+                                <div class="text-xs text-slate-500">Giridih's Best Eye Hospital</div>
+                            </div>
+                        </div>
+
+                        <div class="absolute -top-6 -right-6 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+                                <i class="fa-solid fa-star text-xl"></i>
+                            </div>
+                            <div>
+                                <div class="text-sm font-bold text-slate-900">4.4/5</div>
+                                <div class="text-xs text-slate-500">Patient Reviews</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] border-2 border-primary/10 rounded-full -z-10"></div>
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] border border-primary/5 rounded-full -z-10"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-up">
+                <h2 class="text-[40px] font-heading font-semibold text-text leading-tight">Benefits with Optcare</h2>
+                <p class="mt-4 text-muted text-base max-w-xl mx-auto leading-relaxed">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="fade-up p-[34px_18px_38px_25px] rounded-[20px] bg-light hover:shadow-[0px_0px_50px_rgba(0,0,0,0.1)] transition-all duration-500 group">
+                    <div class="w-[46px] h-[54px] text-secondary text-[45px] mb-4">
+                        <i class="fa-solid fa-user-doctor"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading font-semibold text-text mb-3">Qualified Doctors</h3>
+                    <p class="text-muted text-base leading-[30px]">Lorem ipsum dolor sit elit consectur sed eiusmod tempor labore.</p>
+                </div>
+
+                <div class="fade-up p-[34px_18px_38px_25px] rounded-[20px] bg-light hover:shadow-[0px_0px_50px_rgba(0,0,0,0.1)] transition-all duration-500 group" style="transition-delay: 0.1s;">
+                    <div class="w-[40px] h-[54px] text-secondary text-[40px] mb-4">
+                        <i class="fa-solid fa-microscope"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading font-semibold text-text mb-3">Modern Equipment</h3>
+                    <p class="text-muted text-base leading-[30px]">Lorem ipsum dolor sit elit consectur sed eiusmod tempor labore.</p>
+                </div>
+
+                <div class="fade-up p-[34px_18px_38px_25px] rounded-[20px] bg-light hover:shadow-[0px_0px_50px_rgba(0,0,0,0.1)] transition-all duration-500 group" style="transition-delay: 0.2s;">
+                    <div class="w-[58px] h-[55px] text-secondary text-[55px] mb-4">
+                        <i class="fa-solid fa-truck-medical"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading font-semibold text-text mb-3">Emergency Help</h3>
+                    <p class="text-muted text-base leading-[30px]">Lorem ipsum dolor sit elit consectur sed eiusmod tempor labore.</p>
+                </div>
+
+                <div class="fade-up p-[34px_18px_38px_25px] rounded-[20px] bg-light hover:shadow-[0px_0px_50px_rgba(0,0,0,0.1)] transition-all duration-500 group" style="transition-delay: 0.3s;">
+                    <div class="w-[54px] h-[55px] text-secondary text-[50px] mb-4">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading font-semibold text-text mb-3">Individual Approach</h3>
+                    <p class="text-muted text-base leading-[30px]">Lorem ipsum dolor sit elit consectur sed eiusmod tempor labore.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Image Side -->
+                <div class="relative fade-left">
+                    <div class="relative">
+                        <img src="https://kimi-web-img.moonshot.cn/img/d9xge6df0lz6t.cloudfront.net/aa91ae8f1a46cf9e8d41bbbc245b98af59c87368.jpg" 
+                             alt="Modern Eye Clinic Interior" 
+                             class="rounded-[205px] w-[410px] h-[410px] object-cover mx-auto">
+
+                        <!-- 30 Years Badge -->
+                        <div class="absolute right-0 bottom-0 bg-secondary text-white p-[54px_60px_63px] rounded-[70px] shadow-[0px_20px_40px_rgba(0,0,0,0.2)]">
+                            <div class="text-[50px] font-heading font-bold leading-[50px] text-center">30</div>
+                            <div class="text-xl font-heading font-medium text-center leading-7 mt-1">Years of Experience<br>in This Field</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Side -->
+                <div class="fade-up space-y-6">
+                    <div class="relative">
+                        <span class="text-[90px] font-heading font-extrabold leading-[80px] bg-gradient-to-b from-[#F8ECE3] to-[#DEF4F1] bg-clip-text text-transparent absolute -top-8 -left-4">About</span>
+                        <h2 class="text-[40px] font-heading font-bold text-text leading-[44px] relative mt-14">
+                            The Great Place Of Eyecare Hospital Center
+                        </h2>
+                    </div>
+
+                    <p class="text-muted leading-[29px] text-base">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat.
+                    </p>
+
+                    <div class="grid sm:grid-cols-2 gap-8 pt-4">
+                        <div class="space-y-4">
+                            <h4 class="text-2xl font-heading font-semibold text-text">Our Mission</h4>
+                            <ul class="space-y-3 text-base">
+                                <li class="flex items-center gap-3 pl-[30px] relative">
+                                    <i class="fa-solid fa-check text-secondary absolute left-0 text-[15px]"></i>
+                                    <span class="text-[#212529]">High-quality work</span>
+                                </li>
+                                <li class="flex items-center gap-3 pl-[30px] relative">
+                                    <i class="fa-solid fa-check text-secondary absolute left-0 text-[15px]"></i>
+                                    <span class="text-[#212529]">Straightforward pricing</span>
+                                </li>
+                                <li class="flex items-center gap-3 pl-[30px] relative">
+                                    <i class="fa-solid fa-check text-secondary absolute left-0 text-[15px]"></i>
+                                    <span class="text-[#212529]">Rapid response times</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="space-y-4">
+                            <h4 class="text-2xl font-heading font-semibold text-text">Our Vision</h4>
+                            <ul class="space-y-3 text-base">
+                                <li class="flex items-center gap-3 pl-[30px] relative">
+                                    <i class="fa-solid fa-check text-secondary absolute left-0 text-[15px]"></i>
+                                    <span class="text-[#212529]">Emergency power solutions</span>
+                                </li>
+                                <li class="flex items-center gap-3 pl-[30px] relative">
+                                    <i class="fa-solid fa-check text-secondary absolute left-0 text-[15px]"></i>
+                                    <span class="text-[#212529]">Wiring and installation</span>
+                                </li>
+                                <li class="flex items-center gap-3 pl-[30px] relative">
+                                    <i class="fa-solid fa-check text-secondary absolute left-0 text-[15px]"></i>
+                                    <span class="text-[#212529]">Full-service electrical layout</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-lighter relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-up">
+                <span class="text-[90px] font-heading font-extrabold leading-[80px] bg-gradient-to-b from-[#EDE3DA] to-[#D3EBE9] bg-clip-text text-transparent block -mb-6">Services</span>
+                <h2 class="text-[40px] font-heading font-bold text-text leading-[44px] relative">
+                    A Global Leader, Treatment of Eye Disease
+                </h2>
+            </div>
+
+            <!-- Service Tabs -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12">
+                <button class="service-tab active px-5 py-9 rounded-[30px] bg-primary text-white flex flex-col items-center gap-4 min-w-[180px] transition-all" data-service="0">
+                    <i class="fa-solid fa-user-doctor text-[45px]"></i>
+                    <span class="text-xl font-heading font-semibold">Surgical Procedures</span>
+                </button>
+                <button class="service-tab px-5 py-9 rounded-[30px] bg-[#EBECED] text-text flex flex-col items-center gap-4 min-w-[180px] transition-all hover:bg-primary hover:text-white" data-service="1">
+                    <i class="fa-solid fa-child text-[40px]"></i>
+                    <span class="text-xl font-heading font-semibold text-center leading-[26px]">Paediatric Ophthalmology</span>
+                </button>
+                <button class="service-tab px-5 py-9 rounded-[30px] bg-[#EBECED] text-text flex flex-col items-center gap-4 min-w-[180px] transition-all hover:bg-primary hover:text-white" data-service="2">
+                    <i class="fa-solid fa-glasses text-[45px]"></i>
+                    <span class="text-xl font-heading font-semibold">Lenses Transitions</span>
+                </button>
+                <button class="service-tab px-5 py-9 rounded-[30px] bg-[#EBECED] text-text flex flex-col items-center gap-4 min-w-[180px] transition-all hover:bg-primary hover:text-white" data-service="3">
+                    <i class="fa-solid fa-eye text-[45px]"></i>
+                    <span class="text-xl font-heading font-semibold">Laser Eye Surgery</span>
+                </button>
+                <button class="service-tab px-5 py-9 rounded-[30px] bg-[#EBECED] text-text flex flex-col items-center gap-4 min-w-[180px] transition-all hover:bg-primary hover:text-white" data-service="4">
+                    <i class="fa-solid fa-binoculars text-[45px]"></i>
+                    <span class="text-xl font-heading font-semibold">Vision Correction</span>
+                </button>
+            </div>
+
+            <!-- Service Content -->
+            <div class="bg-white rounded-t-[30px] shadow-[0px_0px_50px_rgba(0,0,0,0.07)] p-8 md:p-16">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="service-content active" data-service="0">
+                        <h3 class="text-[30px] font-heading font-semibold text-text mb-6">Surgical Procedures</h3>
+                        <p class="text-muted text-base leading-[26px] mb-6">
+                            Consectetur adipisicing sed eiusmod tempor incidunt labore dolore magna aliqua enim minim veniam quis nostrud exercitation ullamco laboris nis aliquip exea commodo consequat totam rem aperiam eaque ipsa quae ab illo invet ore veritatis.
+                        </p>
+                        <p class="text-muted text-base leading-[26px] mb-8">
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem acus antium doloremque laudantium.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-3 pl-[30px] relative">
+                                <i class="fa-solid fa-check text-secondary absolute left-0 text-[15px]"></i>
+                                <span class="text-[17px] font-heading font-medium text-text">High-quality surgical procedures</span>
+                            </li>
+                            <li class="flex items-center gap-3 pl-[30px] relative">
+                                <i class="fa-solid fa-check text-secondary absolute left-0 text-[15px]"></i>
+                                <span class="text-[17px] font-heading font-medium text-text">Advanced medical equipment</span>
+                            </li>
+                            <li class="flex items-center gap-3 pl-[30px] relative">
+                                <i class="fa-solid fa-check text-secondary absolute left-0 text-[15px]"></i>
+                                <span class="text-[17px] font-heading font-medium text-text">Experienced surgical team</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="service-content hidden" data-service="1">
+                        <h3 class="text-[30px] font-heading font-semibold text-text mb-6">Paediatric Ophthalmology</h3>
+                        <p class="text-muted text-base leading-[26px] mb-6">
+                            Specialized eye care for children of all ages. Our pediatric ophthalmologists are trained to diagnose and treat eye conditions in infants, children, and adolescents with gentle, child-friendly approaches.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-3 pl-[30px] relative">
+                                <i class="fa-solid fa-check text-secondary absolute left-0 text-[15px]"></i>
+                                <span class="text-[17px] font-heading font-medium text-text">Child-friendly environment</span>
+                            </li>
+                            <li class="flex items-center gap-3 pl-[30px] relative">
+                                <i class="fa-solid fa-check text-secondary absolute left-0 text-[15px]"></i>
+                                <span class="text-[17px] font-heading font-medium text-text">Early vision screening</span>
+                            </li>
+                            <li class="flex items-center gap-3 pl-[30px] relative">
+                                <i class="fa-solid fa-check text-secondary absolute left-0 text-[15px]"></i>
+                                <span class="text-[17px] font-heading font-medium text-text">Squint correction specialists</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="service-content hidden" data-service="2">
+                        <h3 class="text-[30px] font-heading font-semibold text-text mb-6">Lenses Transitions</h3>
+                        <p class="text-muted text-base leading-[26px] mb-6">
+                            We offer a wide range of premium lens options including multifocal, toric, and photochromic lenses. Our specialists will help you choose the perfect lenses for your lifestyle and vision needs.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-3 pl-[30px] relative">
+                                <i class="fa-solid fa-check text-secondary absolute left-0 text-[15px]"></i>
+                                <span class="text-[17px] font-heading font-medium text-text">Premium lens options</span>
+                            </li>
+                            <li class="flex items-center gap-3 pl-[30px] relative">
+                                <i class="fa-solid fa-check text-secondary absolute left-0 text-[15px]"></i>
+                                <span class="text-[17px] font-heading font-medium text-text">Custom fitting services</span>
+                            </li>
+                            <li class="flex items-center gap-3 pl-[30px] relative">
+                                <i class="fa-solid fa-check text-secondary absolute left-0 text-[15px]"></i>
+                                <span class="text-[17px] font-heading font-medium text-text">Blue light protection</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="service-content hidden" data-service="3">
+                        <h3 class="text-[30px] font-heading font-semibold text-text mb-6">Laser Eye Surgery</h3>
+                        <p class="text-muted text-base leading-[26px] mb-6">
+                            Advanced LASIK and PRK procedures using state-of-the-art excimer laser technology. Achieve freedom from glasses and contact lenses with our precise, safe laser vision correction treatments.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-3 pl-[30px] relative">
+                                <i class="fa-solid fa-check text-secondary absolute left-0 text-[15px]"></i>
+                                <span class="text-[17px] font-heading font-medium text-text">Blade-free LASIK</span>
+                            </li>
+                            <li class="flex items-center gap-3 pl-[30px] relative">
+                                <i class="fa-solid fa-check text-secondary absolute left-0 text-[15px]"></i>
+                                <span class="text-[17px] font-heading font-medium text-text">Quick recovery time</span>
+                            </li>
+                            <li class="flex items-center gap-3 pl-[30px] relative">
+                                <i class="fa-solid fa-check text-secondary absolute left-0 text-[15px]"></i>
+                                <span class="text-[17px] font-heading font-medium text-text">High success rates</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="service-content hidden" data-service="4">
+                        <h3 class="text-[30px] font-heading font-semibold text-text mb-6">Vision Correction</h3>
+                        <p class="text-muted text-base leading-[26px] mb-6">
+                            Comprehensive vision correction solutions including prescription glasses, contact lenses, and surgical options. We provide personalized treatment plans tailored to your specific vision requirements.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-3 pl-[30px] relative">
+                                <i class="fa-solid fa-check text-secondary absolute left-0 text-[15px]"></i>
+                                <span class="text-[17px] font-heading font-medium text-text">Comprehensive eye exams</span>
+                            </li>
+                            <li class="flex items-center gap-3 pl-[30px] relative">
+                                <i class="fa-solid fa-check text-secondary absolute left-0 text-[15px]"></i>
+                                <span class="text-[17px] font-heading font-medium text-text">Custom prescriptions</span>
+                            </li>
+                            <li class="flex items-center gap-3 pl-[30px] relative">
+                                <i class="fa-solid fa-check text-secondary absolute left-0 text-[15px]"></i>
+                                <span class="text-[17px] font-heading font-medium text-text">Follow-up care</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="relative">
+                        <img id="service-image" src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFLFygJ9X-OwNlGS9uwZgRVy6mF5AghjD_cmxMN8jPkQ-Nb_HiAqleaSGWc-QIPfNYDtVNCTJnP8GkpCQCTi7XWmglWP5i40Smf2ZMqVr6Gp7jwv3LOIpyaxhdX_quQ31Wiz-tHueZ-KrOI=s1360-w1360-h1020-rw" 
+                             alt="Service Image" 
+                             class="w-full h-[377px] object-cover rounded-[30px]">
+                    </div>      
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-secondary relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+                <div class="flex items-center gap-4 text-white fade-up">
+                    <div class="w-14 h-14 flex items-center justify-center">
+                        <i class="fa-solid fa-user-doctor text-4xl"></i>
+                    </div>
+                    <div>
+                        <div class="text-4xl md:text-5xl font-heading font-bold">90</div>
+                        <div class="text-sm text-white/90">Expert Doctors</div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 text-white fade-up" style="transition-delay: 0.1s;">
+                    <div class="w-14 h-14 flex items-center justify-center">
+                        <i class="fa-solid fa-glasses text-4xl"></i>
+                    </div>
+                    <div>
+                        <div class="text-4xl md:text-5xl font-heading font-bold">2.6</div>
+                        <div class="text-sm text-white/90">Different Services</div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 text-white fade-up" style="transition-delay: 0.2s;">
+                    <div class="w-14 h-14 flex items-center justify-center">
+                        <i class="fa-solid fa-face-smile text-4xl"></i>
+                    </div>
+                    <div>
+                        <div class="text-4xl md:text-5xl font-heading font-bold">35</div>
+                        <div class="text-sm text-white/90">Happy Patients</div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 text-white fade-up" style="transition-delay: 0.3s;">
+                    <div class="w-14 h-14 flex items-center justify-center">
+                        <i class="fa-solid fa-award text-4xl"></i>
+                    </div>
+                    <div>
+                        <div class="text-4xl md:text-5xl font-heading font-bold">10</div>
+                        <div class="text-sm text-white/90">Awards Win</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-24 bg-light relative overflow-hidden">
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center mb-16 fade-up">
+                <span class="text-primary font-semibold text-sm tracking-wider uppercase">Our Team</span>
+                <h2 class="mt-4 text-4xl md:text-5xl font-heading font-bold text-text">
+                    The Most Qualified Skillful &<br>
+                    <span class="gradient-text">Professional Staff</span>
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Team Member 1 -->
+                <div class="team-card fade-up bg-white rounded-3xl overflow-hidden shadow-lg group">
+                    <div class="relative overflow-hidden h-80 bg-gradient-to-br from-primary/5 to-secondary/5">
+                        <div class="team-img w-full h-full bg-gradient-to-br from-teal-100 to-teal-50 flex items-center justify-center transition-transform duration-500">
+                            <i class="fa-solid fa-user-doctor text-8xl text-primary/30"></i>
+                        </div>
+                        <div class="team-overlay absolute inset-0 bg-primary/90 opacity-0 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="flex gap-3">
+                                <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary hover:bg-slate-100 transition-colors">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary hover:bg-slate-100 transition-colors">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                                <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary hover:bg-slate-100 transition-colors">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold text-text">Dr. B.K Nishad</h3>
+                        <p class="text-primary font-medium text-sm mt-2">Senior Ophthalmologist</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="team-card fade-up bg-white rounded-3xl overflow-hidden shadow-lg group" style="transition-delay: 0.1s;">
+                    <div class="relative overflow-hidden h-80 bg-gradient-to-br from-primary/5 to-secondary/5">
+                        <div class="team-img w-full h-full bg-gradient-to-br from-teal-100 to-teal-50 flex items-center justify-center transition-transform duration-500">
+                            <i class="fa-solid fa-user-doctor text-8xl text-primary/30"></i>
+                        </div>
+                        <div class="team-overlay absolute inset-0 bg-primary/90 opacity-0 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="flex gap-3">
+                                <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary hover:bg-slate-100 transition-colors">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary hover:bg-slate-100 transition-colors">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                                <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary hover:bg-slate-100 transition-colors">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold text-text">Dr. Suman Chandrakar</h3>
+                        <p class="text-primary font-medium text-sm mt-2">Eye Surgeon</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="team-card fade-up bg-white rounded-3xl overflow-hidden shadow-lg group" style="transition-delay: 0.2s;">
+                    <div class="relative overflow-hidden h-80 bg-gradient-to-br from-primary/5 to-secondary/5">
+                        <div class="team-img w-full h-full bg-gradient-to-br from-teal-100 to-teal-50 flex items-center justify-center transition-transform duration-500">
+                            <i class="fa-solid fa-user-nurse text-8xl text-primary/30"></i>
+                        </div>
+                        <div class="team-overlay absolute inset-0 bg-primary/90 opacity-0 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="flex gap-3">
+                                <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary hover:bg-slate-100 transition-colors">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary hover:bg-slate-100 transition-colors">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                                <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary hover:bg-slate-100 transition-colors">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold text-text">Mr. Sonu Negi</h3>
+                        <p class="text-primary font-medium text-sm mt-2">Senior Consultant</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 bg-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center mb-16 fade-up">
+                <span class="text-primary font-semibold text-sm tracking-wider uppercase">Testimonials</span>
+                <h2 class="mt-4 text-4xl md:text-5xl font-heading font-bold text-text">
+                    What Our Client Say<br>
+                    <span class="gradient-text">About Optcare</span>
+                </h2>
+            </div>
+
+            <!-- Testimonial Carousel -->
+            <div class="fade-up bg-light p-8 md:p-12 rounded-3xl relative">
+                <div class="text-primary text-6xl mb-6 opacity-20 text-center">
+                    <i class="fa-solid fa-quote-left"></i>
+                </div>
+
+                <div id="testimonial-container">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-slide active text-center">
+                        <p class="text-muted text-lg md:text-xl leading-relaxed mb-8 max-w-3xl mx-auto">
+                            Adipisicing elit sed do eiusmodim tempor incid labore etax dolore magna aliqua enim minium quis veniam nostrud exercition ulamco laboris nisar aliquip commodo consequat duis aute irure dolor in reprehenderit in vol uptate velit esse.
+                        </p>
+                        <div class="flex items-center justify-center gap-4">
+                            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-xl">RM</div>
+                            <div class="text-left">
+                                <div class="font-bold text-text text-lg">Rachel McAdams</div>
+                                <div class="text-muted">Patient</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-slide hidden text-center">
+                        <p class="text-muted text-lg md:text-xl leading-relaxed mb-8 max-w-3xl mx-auto">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris.
+                        </p>
+                        <div class="flex items-center justify-center gap-4">
+                            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-xl">JD</div>
+                            <div class="text-left">
+                                <div class="font-bold text-text text-lg">John Davidson</div>
+                                <div class="text-muted">Patient</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-slide hidden text-center">
+                        <p class="text-muted text-lg md:text-xl leading-relaxed mb-8 max-w-3xl mx-auto">
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt.
+                        </p>
+                        <div class="flex items-center justify-center gap-4">
+                            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-xl">SK</div>
+                            <div class="text-left">
+                                <div class="font-bold text-text text-lg">Sarah Kim</div>
+                                <div class="text-muted">Patient</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <div class="flex justify-center gap-3 mt-8">
+                    <button class="testimonial-dot w-3 h-3 rounded-full bg-primary transition-all" data-slide="0"></button>
+                    <button class="testimonial-dot w-3 h-3 rounded-full bg-primary/30 transition-all" data-slide="1"></button>
+                    <button class="testimonial-dot w-3 h-3 rounded-full bg-primary/30 transition-all" data-slide="2"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <!-- Working Hours -->
+                <div class="fade-left space-y-8">
+                    <div>
+                        <span class="text-primary font-semibold text-sm tracking-wider uppercase">Contact Info</span>
+                        <h2 class="mt-4 text-4xl md:text-5xl font-heading font-bold text-text">Get In Touch</h2>
+                    </div>
+
+                    <!-- Working Hours -->
+                    <div class="bg-light p-8 rounded-3xl">
+                        <h3 class="text-xl font-bold text-text mb-6 flex items-center gap-3">
+                            <i class="fa-solid fa-clock text-primary"></i>
+                            Working Hours
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center py-3 border-b border-teal-100">
+                                <span class="text-muted">Monday - Friday</span>
+                                <span class="font-semibold text-text">9:00 AM - 8:00 PM</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-teal-100">
+                                <span class="text-muted">Saturday</span>
+                                <span class="font-semibold text-text">9:00 AM - 6:00 PM</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-teal-100">
+                                <span class="text-muted">Sunday</span>
+                                <span class="font-semibold text-text">10:00 AM - 2:00 PM</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3">
+                                <span class="text-muted">Emergency</span>
+                                <span class="font-semibold text-primary">24/7 Available</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary shrink-0">
+                                <i class="fa-solid fa-location-dot text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-text">Address</h4>
+                                <p class="text-muted mt-1"> Dumri Chowk<br>Giridih Road, Jamtara - 825106</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary shrink-0">
+                                <i class="fa-solid fa-phone text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-text">Phone</h4>
+                                <p class="text-muted mt-1">+91 62033 16774<br>+91 98765 43211</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary shrink-0">
+                                <i class="fa-solid fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-text">Email</h4>
+                                <p class="text-muted mt-1">info@parasnetralaya.com<br>support@parasnetralaya.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="fade-up">
+                    <div class="bg-light p-8 md:p-10 rounded-3xl border border-teal-100">
+                        <h3 class="text-2xl font-bold text-text mb-6">Send Us a Message</h3>
+                        <form class="space-y-6" onsubmit="event.preventDefault(); alert('Thank you! We will contact you shortly to confirm your appointment at Paras Netralaya.');">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-slate-700 mb-2">Your Name</label>
+                                    <input type="text" class="w-full px-4 py-3 rounded-xl border border-teal-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all bg-white" placeholder="John Doe" required>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-slate-700 mb-2">Your Email</label>
+                                    <input type="email" class="w-full px-4 py-3 rounded-xl border border-teal-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all bg-white" placeholder="john@example.com" required>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-2">Subject</label>
+                                <input type="text" class="w-full px-4 py-3 rounded-xl border border-teal-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all bg-white" placeholder="How can we help?" required>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-2">Message</label>
+                                <textarea rows="4" class="w-full px-4 py-3 rounded-xl border border-teal-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all bg-white resize-none" placeholder="Your message..."></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-4 btn-primary text-white rounded-xl font-bold shadow-lg shadow-primary/30 hover:shadow-xl transform hover:-translate-y-0.5">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-20 pb-10 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <!-- Map Section -->
+            <div class="mb-16 rounded-2xl overflow-hidden">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.0!2d86.65!3d24.18!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDEwJzQ4LjAiTiA4NsKwMzknMDAuMCJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin&q=Paras+Netralaya+Eye+Hospital+Giridih"
+                    width="100%"
+                    height="300"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    class="grayscale hover:grayscale-0 transition-all duration-500">
+                </iframe>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- About -->
+                <div class="space-y-6">
+                    <h4 class="font-bold text-2xl font-heading">About</h4>
+                    <ul class="space-y-3 text-white/70 text-base">
+                        <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Our Services</a></li>
+                        <li><a href="#works" class="hover:text-white transition-colors">Why Choose Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Testimonials</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links -->
+                <div class="space-y-6">
+                    <h4 class="font-bold text-2xl font-heading">Links</h4>
+                    <ul class="space-y-3 text-white/70 text-base">
+                        <li><a href="#" class="hover:text-white transition-colors">Patients</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Visitors</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Professionals</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Working With Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Our Research</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="space-y-6">
+                    <h4 class="font-bold text-2xl font-heading">Services</h4>
+                    <ul class="space-y-3 text-white/70 text-base">
+                        <li><a href="#services" class="hover:text-white transition-colors">Surgical Procedures</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Paediatric Ophthalmology</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Lenses Transitions</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Laser Eye Surgery</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Vision Correction</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-6">
+                    <h4 class="font-bold text-2xl font-heading">Contact Info</h4>
+                    <ul class="space-y-4 text-white/70 text-base">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot text-secondary mt-1"></i>
+                            <span>Dumri Chowk<br>Giridih Road, Jamtara</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-secondary"></i>
+                            <span>+91 98765 43210</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-secondary"></i>
+                            <span>info@parasnetralaya.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-white/50 text-base">&copy; 2026 Paras Netralaya. All rights reserved.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-12 h-12 border border-white/15 rounded-full flex items-center justify-center hover:bg-primary hover:border-primary transition-all">
+                        <i class="fa-brands fa-facebook-f text-sm"></i>
+                    </a>
+                    <a href="#" class="w-12 h-12 border border-white/15 rounded-full flex items-center justify-center hover:bg-primary hover:border-primary transition-all">
+                        <i class="fa-brands fa-twitter text-sm"></i>
+                    </a>
+                    <a href="#" class="w-12 h-12 border border-white/15 rounded-full flex items-center justify-center hover:bg-primary hover:border-primary transition-all">
+                        <i class="fa-brands fa-instagram text-sm"></i>
+                    </a>
+                    <a href="#" class="w-12 h-12 border border-white/15 rounded-full flex items-center justify-center hover:bg-primary hover:border-primary transition-all">
+                        <i class="fa-brands fa-linkedin-in text-sm"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to top -->
+    <button id="scroll-top" class="fixed bottom-8 right-8 w-12 h-12 bg-primary text-white rounded-full shadow-xl opacity-0 invisible transition-all duration-300 hover:bg-secondary hover:scale-110 z-50 flex items-center justify-center">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-up, .fade-left, .scale-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > 100) {
+                navbar.classList.add('glass-nav', 'shadow-sm');
+                navbar.classList.remove('py-4');
+                navbar.classList.add('py-2');
+            } else {
+                navbar.classList.remove('glass-nav', 'shadow-sm');
+                navbar.classList.remove('py-2');
+                navbar.classList.add('py-4');
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Scroll to top button
+        const scrollTopBtn = document.getElementById('scroll-top');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            // Show/hide scroll to top button
+            if (currentScroll > 500) {
+                scrollTopBtn.classList.remove('opacity-0', 'invisible');
+                scrollTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                scrollTopBtn.classList.add('opacity-0', 'invisible');
+                scrollTopBtn.classList.remove('opacity-100', 'visible');
+            }
+
+            // Hide/show navbar on scroll
+            if (currentScroll > lastScroll && currentScroll > 100) {
+                // Scrolling down - hide navbar
+                navbar.classList.add('-translate-y-full');
+                navbar.classList.remove('translate-y-0');
+            } else {
+                // Scrolling up - show navbar
+                navbar.classList.remove('-translate-y-full');
+                navbar.classList.add('translate-y-0');
+            }
+            lastScroll = currentScroll;
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Service Tabs
+        const serviceTabs = document.querySelectorAll('.service-tab');
+        const serviceContents = document.querySelectorAll('.service-content');
+        const serviceImages = [
+            'https://lh3.googleusercontent.com/gps-cs-s/APNQkAFLFygJ9X-OwNlGS9uwZgRVy6mF5AghjD_cmxMN8jPkQ-Nb_HiAqleaSGWc-QIPfNYDtVNCTJnP8GkpCQCTi7XWmglWP5i40Smf2ZMqVr6Gp7jwv3LOIpyaxhdX_quQ31Wiz-tHueZ-KrOI=s1360-w1360-h1020-rw',
+            'https://lh3.googleusercontent.com/gps-cs-s/APNQkAFkOOGHkfyLhpViDMSa1h2Vv3S1oC596Rf_HEWM4eczo-2-4QzD5YOUBuYaW-q7j4IvZbKfb2SjuibGGD1hgr-imn3maJxibk2G93vz1clMXM-SYqZeF3duuBL2C1Hze9YO6OHEyp8ijzcu=s1360-w1360-h1020-rw',
+            'https://lh3.googleusercontent.com/gps-cs-s/APNQkAHsRWbihT1BWXhgl7VA7kRevfJTk2LAbKJAn6o3ONacbTx0fcxtR7exSL3oDiBJ8uKYrsc0mxvanIF-AyBMCxTg3JfTaZunyEWC_qgX00FN8EIzWDKMbnxYk5wtEr4WY8JavA0EBu57E-Q=s1360-w1360-h1020-rw',
+            'https://lh3.googleusercontent.com/gps-cs-s/APNQkAGCloYs7-9rh8_sfXZeT7vMTLcILToZDjUzqxlND9taIbd4DbA97FPHNnV-L6-JbjHB4Fyii2MsKxkWPaE-JILnRCVy1eZ-a64GfOYyI-M6qNsGkI6o8Z3z-NtWjt6_c1631Xjuj9ERClMw=s1360-w1360-h1020-rw',
+            'https://lh3.googleusercontent.com/gps-cs-s/APNQkAEdPHrvtlZpLWl6sGx1tutc1yYwkCvAi8tU3uJxG7JI93WWOHg4fp1VS9bxfKEXkqrCFaVSZFBslsvYZzaP_LfIzG0-wQGM6fmbfU8YYy2dU0jx9mluk121TLb_sYm_vGr5OWQf=s1360-w1360-h1020-rw'
+        ];
+        const serviceImageEl = document.getElementById('service-image');
+
+        serviceTabs.forEach((tab, index) => {
+            tab.addEventListener('click', () => {
+                // Remove active from all tabs
+                serviceTabs.forEach(t => {
+                    t.classList.remove('active', 'bg-primary', 'text-white');
+                    t.classList.add('bg-[#EBECED]', 'text-text');
+                });
+                // Add active to clicked tab
+                tab.classList.add('active', 'bg-primary', 'text-white');
+                tab.classList.remove('bg-[#EBECED]', 'text-text');
+
+                // Hide all contents
+                serviceContents.forEach(c => c.classList.add('hidden'));
+                serviceContents.forEach(c => c.classList.remove('active'));
+
+                // Show selected content
+                serviceContents[index].classList.remove('hidden');
+                serviceContents[index].classList.add('active');
+
+                // Update image
+                if (serviceImageEl) {
+                    serviceImageEl.src = serviceImages[index];
+                }
+            });
+        });
+
+        // Testimonial Carousel
+        const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+        const testimonialDots = document.querySelectorAll('.testimonial-dot');
+        let currentTestimonial = 0;
+
+        function showTestimonial(index) {
+            testimonialSlides.forEach((slide, i) => {
+                slide.classList.add('hidden');
+                slide.classList.remove('active');
+                testimonialDots[i].classList.remove('bg-primary');
+                testimonialDots[i].classList.add('bg-primary/30');
+            });
+            testimonialSlides[index].classList.remove('hidden');
+            testimonialSlides[index].classList.add('active');
+            testimonialDots[index].classList.remove('bg-primary/30');
+            testimonialDots[index].classList.add('bg-primary');
+        }
+
+        function nextTestimonial() {
+            currentTestimonial = (currentTestimonial + 1) % testimonialSlides.length;
+            showTestimonial(currentTestimonial);
+        }
+
+        // Auto advance testimonials
+        setInterval(nextTestimonial, 6000);
+
+        // Testimonial dot click handlers
+        testimonialDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentTestimonial = index;
+                showTestimonial(currentTestimonial);
+            });
+        });
+
+        // Team card hover effects
+        const teamCards = document.querySelectorAll('.team-card');
+        teamCards.forEach(card => {
+            const overlay = card.querySelector('.team-overlay');
+            const img = card.querySelector('.team-img');
+
+            card.addEventListener('mouseenter', () => {
+                if (overlay) overlay.classList.remove('opacity-0');
+                if (overlay) overlay.classList.add('opacity-100');
+                if (img) img.classList.add('scale-110');
+            });
+
+            card.addEventListener('mouseleave', () => {
+                if (overlay) overlay.classList.add('opacity-0');
+                if (overlay) overlay.classList.remove('opacity-100');
+                if (img) img.classList.remove('scale-110');
+            });
+        });
+    </script>
+</body>
+</html>
