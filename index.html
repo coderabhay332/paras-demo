@@ -130,6 +130,24 @@
             height: 1px;
             background: linear-gradient(90deg, transparent, #03C0B4, transparent);
         }
+
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .scrollbar-hide {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+
+        /* Mobile menu animation */
+        #mobile-menu {
+            transition: all 0.3s ease-in-out;
+        }
+        #mobile-menu.hidden {
+            display: none;
+        }
     </style>
 <base target="_blank">
 </head>
@@ -216,53 +234,53 @@
                         </a>
                     </div>
 
-                    <div class="flex items-center gap-8 pt-4">
-                        <div>
-                            <div class="text-3xl font-bold text-slate-900">4.9</div>
-                            <div class="text-sm text-slate-500">Star Rating</div>
+                    <div class="flex flex-wrap items-center gap-6 sm:gap-8 pt-4">
+                        <div class="text-center sm:text-left">
+                            <div class="text-2xl sm:text-3xl font-bold text-slate-900">4.9</div>
+                            <div class="text-xs sm:text-sm text-slate-500">Star Rating</div>
                         </div>
-                        <div class="w-px h-12 bg-slate-200"></div>
-                        <div>
-                            <div class="text-3xl font-bold text-slate-900">500+</div>
-                            <div class="text-sm text-slate-500">Happy Patients</div>
+                        <div class="hidden sm:block w-px h-12 bg-slate-200"></div>
+                        <div class="text-center sm:text-left">
+                            <div class="text-2xl sm:text-3xl font-bold text-slate-900">500+</div>
+                            <div class="text-xs sm:text-sm text-slate-500">Happy Patients</div>
                         </div>
-                        <div class="w-px h-12 bg-slate-200"></div>
-                        <div>
-                            <div class="text-3xl font-bold text-slate-900">Expert</div>
-                            <div class="text-sm text-slate-500">Eye Surgeons</div>
+                        <div class="hidden sm:block w-px h-12 bg-slate-200"></div>
+                        <div class="text-center sm:text-left">
+                            <div class="text-2xl sm:text-3xl font-bold text-slate-900">Expert</div>
+                            <div class="text-xs sm:text-sm text-slate-500">Eye Surgeons</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="relative fade-up" style="transition-delay: 0.2s;">
+                <div class="relative fade-up mt-8 lg:mt-0" style="transition-delay: 0.2s;">
                     <div class="relative z-10 float-anim">
                         <img src="https://kimi-web-img.moonshot.cn/img/content3.jdmagicbox.com/9f9631c55f1dd08963cb738dc48bdc383d5d29ff.jpg" 
                              alt="Paras Netralaya Hospital Building" 
-                             class="w-full max-w-lg mx-auto rounded-3xl shadow-2xl object-cover h-[500px]">
+                             class="w-full max-w-lg mx-auto rounded-3xl shadow-2xl object-cover h-[350px] sm:h-[500px]">
 
-                        <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3">
-                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600">
-                                <i class="fa-solid fa-shield-heart text-xl"></i>
+                        <div class="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 bg-white p-3 sm:p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-2 sm:gap-3">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600">
+                                <i class="fa-solid fa-shield-heart text-lg sm:text-xl"></i>
                             </div>
                             <div>
-                                <div class="text-sm font-bold text-slate-900">Trusted Care</div>
-                                <div class="text-xs text-slate-500">Giridih's Best Eye Hospital</div>
+                                <div class="text-xs sm:text-sm font-bold text-slate-900">Trusted Care</div>
+                                <div class="text-[10px] sm:text-xs text-slate-500">Giridih's Best</div>
                             </div>
                         </div>
 
-                        <div class="absolute -top-6 -right-6 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3">
-                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary">
-                                <i class="fa-solid fa-star text-xl"></i>
+                        <div class="absolute -top-4 -right-4 sm:-top-6 sm:-right-6 bg-white p-3 sm:p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-2 sm:gap-3">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+                                <i class="fa-solid fa-star text-lg sm:text-xl"></i>
                             </div>
                             <div>
-                                <div class="text-sm font-bold text-slate-900">4.4/5</div>
-                                <div class="text-xs text-slate-500">Patient Reviews</div>
+                                <div class="text-xs sm:text-sm font-bold text-slate-900">4.4/5</div>
+                                <div class="text-[10px] sm:text-xs text-slate-500">Reviews</div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] border-2 border-primary/10 rounded-full -z-10"></div>
-                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] border border-primary/5 rounded-full -z-10"></div>
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] border-2 border-primary/10 rounded-full -z-10 hidden sm:block"></div>
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] border border-primary/5 rounded-full -z-10 hidden sm:block"></div>
                 </div>
             </div>
         </div>
@@ -271,80 +289,80 @@
     <!-- Benefits Section -->
     <section id="benefits" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 fade-up">
-                <h2 class="text-[40px] font-heading font-semibold text-text leading-tight">Benefits with Optcare</h2>
-                <p class="mt-4 text-muted text-base max-w-xl mx-auto leading-relaxed">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="text-center mb-12 sm:mb-16 fade-up px-4">
+                <h2 class="text-3xl sm:text-[40px] font-heading font-semibold text-text leading-tight">Benefits with Optcare</h2>
+                <p class="mt-4 text-muted text-sm sm:text-base max-w-xl mx-auto leading-relaxed">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="fade-up p-[34px_18px_38px_25px] rounded-[20px] bg-light hover:shadow-[0px_0px_50px_rgba(0,0,0,0.1)] transition-all duration-500 group">
-                    <div class="w-[46px] h-[54px] text-secondary text-[45px] mb-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 px-4 sm:px-0">
+                <div class="fade-up p-6 sm:p-[34px_18px_38px_25px] rounded-[20px] bg-light hover:shadow-[0px_0px_50px_rgba(0,0,0,0.1)] transition-all duration-500 group">
+                    <div class="w-10 h-10 sm:w-[46px] sm:h-[54px] text-secondary text-3xl sm:text-[45px] mb-4">
                         <i class="fa-solid fa-user-doctor"></i>
                     </div>
-                    <h3 class="text-2xl font-heading font-semibold text-text mb-3">Qualified Doctors</h3>
-                    <p class="text-muted text-base leading-[30px]">Lorem ipsum dolor sit elit consectur sed eiusmod tempor labore.</p>
+                    <h3 class="text-xl sm:text-2xl font-heading font-semibold text-text mb-3">Qualified Doctors</h3>
+                    <p class="text-muted text-sm sm:text-base leading-relaxed sm:leading-[30px]">Lorem ipsum dolor sit elit consectur sed eiusmod tempor labore.</p>
                 </div>
 
-                <div class="fade-up p-[34px_18px_38px_25px] rounded-[20px] bg-light hover:shadow-[0px_0px_50px_rgba(0,0,0,0.1)] transition-all duration-500 group" style="transition-delay: 0.1s;">
-                    <div class="w-[40px] h-[54px] text-secondary text-[40px] mb-4">
+                <div class="fade-up p-6 sm:p-[34px_18px_38px_25px] rounded-[20px] bg-light hover:shadow-[0px_0px_50px_rgba(0,0,0,0.1)] transition-all duration-500 group" style="transition-delay: 0.1s;">
+                    <div class="w-10 h-10 sm:w-[40px] sm:h-[54px] text-secondary text-3xl sm:text-[40px] mb-4">
                         <i class="fa-solid fa-microscope"></i>
                     </div>
-                    <h3 class="text-2xl font-heading font-semibold text-text mb-3">Modern Equipment</h3>
-                    <p class="text-muted text-base leading-[30px]">Lorem ipsum dolor sit elit consectur sed eiusmod tempor labore.</p>
+                    <h3 class="text-xl sm:text-2xl font-heading font-semibold text-text mb-3">Modern Equipment</h3>
+                    <p class="text-muted text-sm sm:text-base leading-relaxed sm:leading-[30px]">Lorem ipsum dolor sit elit consectur sed eiusmod tempor labore.</p>
                 </div>
 
-                <div class="fade-up p-[34px_18px_38px_25px] rounded-[20px] bg-light hover:shadow-[0px_0px_50px_rgba(0,0,0,0.1)] transition-all duration-500 group" style="transition-delay: 0.2s;">
-                    <div class="w-[58px] h-[55px] text-secondary text-[55px] mb-4">
+                <div class="fade-up p-6 sm:p-[34px_18px_38px_25px] rounded-[20px] bg-light hover:shadow-[0px_0px_50px_rgba(0,0,0,0.1)] transition-all duration-500 group" style="transition-delay: 0.2s;">
+                    <div class="w-10 h-10 sm:w-[58px] sm:h-[55px] text-secondary text-3xl sm:text-[55px] mb-4">
                         <i class="fa-solid fa-truck-medical"></i>
                     </div>
-                    <h3 class="text-2xl font-heading font-semibold text-text mb-3">Emergency Help</h3>
-                    <p class="text-muted text-base leading-[30px]">Lorem ipsum dolor sit elit consectur sed eiusmod tempor labore.</p>
+                    <h3 class="text-xl sm:text-2xl font-heading font-semibold text-text mb-3">Emergency Help</h3>
+                    <p class="text-muted text-sm sm:text-base leading-relaxed sm:leading-[30px]">Lorem ipsum dolor sit elit consectur sed eiusmod tempor labore.</p>
                 </div>
 
-                <div class="fade-up p-[34px_18px_38px_25px] rounded-[20px] bg-light hover:shadow-[0px_0px_50px_rgba(0,0,0,0.1)] transition-all duration-500 group" style="transition-delay: 0.3s;">
-                    <div class="w-[54px] h-[55px] text-secondary text-[50px] mb-4">
+                <div class="fade-up p-6 sm:p-[34px_18px_38px_25px] rounded-[20px] bg-light hover:shadow-[0px_0px_50px_rgba(0,0,0,0.1)] transition-all duration-500 group" style="transition-delay: 0.3s;">
+                    <div class="w-10 h-10 sm:w-[54px] sm:h-[55px] text-secondary text-3xl sm:text-[50px] mb-4">
                         <i class="fa-solid fa-hand-holding-heart"></i>
                     </div>
-                    <h3 class="text-2xl font-heading font-semibold text-text mb-3">Individual Approach</h3>
-                    <p class="text-muted text-base leading-[30px]">Lorem ipsum dolor sit elit consectur sed eiusmod tempor labore.</p>
+                    <h3 class="text-xl sm:text-2xl font-heading font-semibold text-text mb-3">Individual Approach</h3>
+                    <p class="text-muted text-sm sm:text-base leading-relaxed sm:leading-[30px]">Lorem ipsum dolor sit elit consectur sed eiusmod tempor labore.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-24 bg-white relative overflow-hidden">
+    <section id="about" class="py-16 sm:py-24 bg-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="grid lg:grid-cols-2 gap-10 sm:gap-16 items-center">
                 <!-- Image Side -->
-                <div class="relative fade-left">
-                    <div class="relative">
+                <div class="relative fade-left order-2 lg:order-1">
+                    <div class="relative max-w-[350px] sm:max-w-[410px] mx-auto">
                         <img src="https://kimi-web-img.moonshot.cn/img/d9xge6df0lz6t.cloudfront.net/aa91ae8f1a46cf9e8d41bbbc245b98af59c87368.jpg" 
                              alt="Modern Eye Clinic Interior" 
-                             class="rounded-[205px] w-[410px] h-[410px] object-cover mx-auto">
+                             class="rounded-[100px] sm:rounded-[205px] w-full h-[300px] sm:h-[410px] object-cover">
 
                         <!-- 30 Years Badge -->
-                        <div class="absolute right-0 bottom-0 bg-secondary text-white p-[54px_60px_63px] rounded-[70px] shadow-[0px_20px_40px_rgba(0,0,0,0.2)]">
-                            <div class="text-[50px] font-heading font-bold leading-[50px] text-center">30</div>
-                            <div class="text-xl font-heading font-medium text-center leading-7 mt-1">Years of Experience<br>in This Field</div>
+                        <div class="absolute right-0 -bottom-4 sm:right-0 sm:bottom-0 bg-secondary text-white p-6 sm:p-[54px_60px_63px] rounded-[40px] sm:rounded-[70px] shadow-[0px_20px_40px_rgba(0,0,0,0.2)] scale-75 sm:scale-100 origin-bottom-right">
+                            <div class="text-3xl sm:text-[50px] font-heading font-bold leading-tight sm:leading-[50px] text-center">30</div>
+                            <div class="text-sm sm:text-xl font-heading font-medium text-center leading-5 sm:leading-7 mt-1">Years of Experience<br>in This Field</div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Content Side -->
-                <div class="fade-up space-y-6">
+                <div class="fade-up space-y-6 order-1 lg:order-2">
                     <div class="relative">
-                        <span class="text-[90px] font-heading font-extrabold leading-[80px] bg-gradient-to-b from-[#F8ECE3] to-[#DEF4F1] bg-clip-text text-transparent absolute -top-8 -left-4">About</span>
-                        <h2 class="text-[40px] font-heading font-bold text-text leading-[44px] relative mt-14">
+                        <span class="text-5xl sm:text-[90px] font-heading font-extrabold leading-tight sm:leading-[80px] bg-gradient-to-b from-[#F8ECE3] to-[#DEF4F1] bg-clip-text text-transparent absolute -top-4 sm:-top-8 -left-2 sm:-left-4">About</span>
+                        <h2 class="text-2xl sm:text-[40px] font-heading font-bold text-text leading-tight sm:leading-[44px] relative mt-8 sm:mt-14">
                             The Great Place Of Eyecare Hospital Center
                         </h2>
                     </div>
 
-                    <p class="text-muted leading-[29px] text-base">
+                    <p class="text-muted leading-relaxed sm:leading-[29px] text-sm sm:text-base">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat.
                     </p>
 
-                    <div class="grid sm:grid-cols-2 gap-8 pt-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 pt-4">
                         <div class="space-y-4">
                             <h4 class="text-2xl font-heading font-semibold text-text">Our Mission</h4>
                             <ul class="space-y-3 text-base">
@@ -387,149 +405,149 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-24 bg-lighter relative overflow-hidden">
+    <section id="services" class="py-16 sm:py-24 bg-lighter relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 fade-up">
-                <span class="text-[90px] font-heading font-extrabold leading-[80px] bg-gradient-to-b from-[#EDE3DA] to-[#D3EBE9] bg-clip-text text-transparent block -mb-6">Services</span>
-                <h2 class="text-[40px] font-heading font-bold text-text leading-[44px] relative">
+            <div class="text-center mb-10 sm:mb-16 fade-up px-4">
+                <span class="text-5xl sm:text-[90px] font-heading font-extrabold leading-tight sm:leading-[80px] bg-gradient-to-b from-[#EDE3DA] to-[#D3EBE9] bg-clip-text text-transparent block -mb-2 sm:-mb-6">Services</span>
+                <h2 class="text-2xl sm:text-[40px] font-heading font-bold text-text leading-tight sm:leading-[44px] relative">
                     A Global Leader, Treatment of Eye Disease
                 </h2>
             </div>
 
             <!-- Service Tabs -->
-            <div class="flex flex-wrap justify-center gap-3 mb-12">
-                <button class="service-tab active px-5 py-9 rounded-[30px] bg-primary text-white flex flex-col items-center gap-4 min-w-[180px] transition-all" data-service="0">
-                    <i class="fa-solid fa-user-doctor text-[45px]"></i>
-                    <span class="text-xl font-heading font-semibold">Surgical Procedures</span>
+            <div class="flex flex-nowrap overflow-x-auto sm:flex-wrap justify-start sm:justify-center gap-2 sm:gap-3 mb-8 sm:mb-12 pb-4 sm:pb-0 px-4 sm:px-0 -mx-4 sm:mx-0 scrollbar-hide">
+                <button class="service-tab active flex-shrink-0 px-4 sm:px-5 py-4 sm:py-9 rounded-[20px] sm:rounded-[30px] bg-primary text-white flex flex-col items-center gap-2 sm:gap-4 min-w-[120px] sm:min-w-[180px] transition-all" data-service="0">
+                    <i class="fa-solid fa-user-doctor text-2xl sm:text-[45px]"></i>
+                    <span class="text-sm sm:text-xl font-heading font-semibold text-center">Surgical Procedures</span>
                 </button>
-                <button class="service-tab px-5 py-9 rounded-[30px] bg-[#EBECED] text-text flex flex-col items-center gap-4 min-w-[180px] transition-all hover:bg-primary hover:text-white" data-service="1">
-                    <i class="fa-solid fa-child text-[40px]"></i>
-                    <span class="text-xl font-heading font-semibold text-center leading-[26px]">Paediatric Ophthalmology</span>
+                <button class="service-tab flex-shrink-0 px-4 sm:px-5 py-4 sm:py-9 rounded-[20px] sm:rounded-[30px] bg-[#EBECED] text-text flex flex-col items-center gap-2 sm:gap-4 min-w-[120px] sm:min-w-[180px] transition-all hover:bg-primary hover:text-white" data-service="1">
+                    <i class="fa-solid fa-child text-xl sm:text-[40px]"></i>
+                    <span class="text-sm sm:text-xl font-heading font-semibold text-center leading-tight sm:leading-[26px]">Paediatric Ophthalmology</span>
                 </button>
-                <button class="service-tab px-5 py-9 rounded-[30px] bg-[#EBECED] text-text flex flex-col items-center gap-4 min-w-[180px] transition-all hover:bg-primary hover:text-white" data-service="2">
-                    <i class="fa-solid fa-glasses text-[45px]"></i>
-                    <span class="text-xl font-heading font-semibold">Lenses Transitions</span>
+                <button class="service-tab flex-shrink-0 px-4 sm:px-5 py-4 sm:py-9 rounded-[20px] sm:rounded-[30px] bg-[#EBECED] text-text flex flex-col items-center gap-2 sm:gap-4 min-w-[120px] sm:min-w-[180px] transition-all hover:bg-primary hover:text-white" data-service="2">
+                    <i class="fa-solid fa-glasses text-2xl sm:text-[45px]"></i>
+                    <span class="text-sm sm:text-xl font-heading font-semibold text-center">Lenses Transitions</span>
                 </button>
-                <button class="service-tab px-5 py-9 rounded-[30px] bg-[#EBECED] text-text flex flex-col items-center gap-4 min-w-[180px] transition-all hover:bg-primary hover:text-white" data-service="3">
-                    <i class="fa-solid fa-eye text-[45px]"></i>
-                    <span class="text-xl font-heading font-semibold">Laser Eye Surgery</span>
+                <button class="service-tab flex-shrink-0 px-4 sm:px-5 py-4 sm:py-9 rounded-[20px] sm:rounded-[30px] bg-[#EBECED] text-text flex flex-col items-center gap-2 sm:gap-4 min-w-[120px] sm:min-w-[180px] transition-all hover:bg-primary hover:text-white" data-service="3">
+                    <i class="fa-solid fa-eye text-2xl sm:text-[45px]"></i>
+                    <span class="text-sm sm:text-xl font-heading font-semibold text-center">Laser Eye Surgery</span>
                 </button>
-                <button class="service-tab px-5 py-9 rounded-[30px] bg-[#EBECED] text-text flex flex-col items-center gap-4 min-w-[180px] transition-all hover:bg-primary hover:text-white" data-service="4">
-                    <i class="fa-solid fa-binoculars text-[45px]"></i>
-                    <span class="text-xl font-heading font-semibold">Vision Correction</span>
+                <button class="service-tab flex-shrink-0 px-4 sm:px-5 py-4 sm:py-9 rounded-[20px] sm:rounded-[30px] bg-[#EBECED] text-text flex flex-col items-center gap-2 sm:gap-4 min-w-[120px] sm:min-w-[180px] transition-all hover:bg-primary hover:text-white" data-service="4">
+                    <i class="fa-solid fa-binoculars text-2xl sm:text-[45px]"></i>
+                    <span class="text-sm sm:text-xl font-heading font-semibold text-center">Vision Correction</span>
                 </button>
             </div>
 
             <!-- Service Content -->
-            <div class="bg-white rounded-t-[30px] shadow-[0px_0px_50px_rgba(0,0,0,0.07)] p-8 md:p-16">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="bg-white rounded-t-[30px] shadow-[0px_0px_50px_rgba(0,0,0,0.07)] p-5 sm:p-8 md:p-16 mx-4 sm:mx-0">
+                <div class="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
                     <div class="service-content active" data-service="0">
-                        <h3 class="text-[30px] font-heading font-semibold text-text mb-6">Surgical Procedures</h3>
-                        <p class="text-muted text-base leading-[26px] mb-6">
+                        <h3 class="text-xl sm:text-[30px] font-heading font-semibold text-text mb-4 sm:mb-6">Surgical Procedures</h3>
+                        <p class="text-muted text-sm sm:text-base leading-relaxed sm:leading-[26px] mb-4 sm:mb-6">
                             Consectetur adipisicing sed eiusmod tempor incidunt labore dolore magna aliqua enim minim veniam quis nostrud exercitation ullamco laboris nis aliquip exea commodo consequat totam rem aperiam eaque ipsa quae ab illo invet ore veritatis.
                         </p>
-                        <p class="text-muted text-base leading-[26px] mb-8">
+                        <p class="text-muted text-sm sm:text-base leading-relaxed sm:leading-[26px] mb-6 sm:mb-8">
                             Sed ut perspiciatis unde omnis iste natus error sit voluptatem acus antium doloremque laudantium.
                         </p>
-                        <ul class="space-y-4">
-                            <li class="flex items-center gap-3 pl-[30px] relative">
-                                <i class="fa-solid fa-check text-secondary absolute left-0 text-[15px]"></i>
-                                <span class="text-[17px] font-heading font-medium text-text">High-quality surgical procedures</span>
+                        <ul class="space-y-3 sm:space-y-4">
+                            <li class="flex items-center gap-3 pl-6 sm:pl-[30px] relative">
+                                <i class="fa-solid fa-check text-secondary absolute left-0 text-sm sm:text-[15px]"></i>
+                                <span class="text-base sm:text-[17px] font-heading font-medium text-text">High-quality surgical procedures</span>
                             </li>
-                            <li class="flex items-center gap-3 pl-[30px] relative">
-                                <i class="fa-solid fa-check text-secondary absolute left-0 text-[15px]"></i>
-                                <span class="text-[17px] font-heading font-medium text-text">Advanced medical equipment</span>
+                            <li class="flex items-center gap-3 pl-6 sm:pl-[30px] relative">
+                                <i class="fa-solid fa-check text-secondary absolute left-0 text-sm sm:text-[15px]"></i>
+                                <span class="text-base sm:text-[17px] font-heading font-medium text-text">Advanced medical equipment</span>
                             </li>
-                            <li class="flex items-center gap-3 pl-[30px] relative">
-                                <i class="fa-solid fa-check text-secondary absolute left-0 text-[15px]"></i>
-                                <span class="text-[17px] font-heading font-medium text-text">Experienced surgical team</span>
+                            <li class="flex items-center gap-3 pl-6 sm:pl-[30px] relative">
+                                <i class="fa-solid fa-check text-secondary absolute left-0 text-sm sm:text-[15px]"></i>
+                                <span class="text-base sm:text-[17px] font-heading font-medium text-text">Experienced surgical team</span>
                             </li>
                         </ul>
                     </div>
                     <div class="service-content hidden" data-service="1">
-                        <h3 class="text-[30px] font-heading font-semibold text-text mb-6">Paediatric Ophthalmology</h3>
-                        <p class="text-muted text-base leading-[26px] mb-6">
+                        <h3 class="text-xl sm:text-[30px] font-heading font-semibold text-text mb-4 sm:mb-6">Paediatric Ophthalmology</h3>
+                        <p class="text-muted text-sm sm:text-base leading-relaxed sm:leading-[26px] mb-4 sm:mb-6">
                             Specialized eye care for children of all ages. Our pediatric ophthalmologists are trained to diagnose and treat eye conditions in infants, children, and adolescents with gentle, child-friendly approaches.
                         </p>
-                        <ul class="space-y-4">
-                            <li class="flex items-center gap-3 pl-[30px] relative">
-                                <i class="fa-solid fa-check text-secondary absolute left-0 text-[15px]"></i>
-                                <span class="text-[17px] font-heading font-medium text-text">Child-friendly environment</span>
+                        <ul class="space-y-3 sm:space-y-4">
+                            <li class="flex items-center gap-3 pl-6 sm:pl-[30px] relative">
+                                <i class="fa-solid fa-check text-secondary absolute left-0 text-sm sm:text-[15px]"></i>
+                                <span class="text-base sm:text-[17px] font-heading font-medium text-text">Child-friendly environment</span>
                             </li>
-                            <li class="flex items-center gap-3 pl-[30px] relative">
-                                <i class="fa-solid fa-check text-secondary absolute left-0 text-[15px]"></i>
-                                <span class="text-[17px] font-heading font-medium text-text">Early vision screening</span>
+                            <li class="flex items-center gap-3 pl-6 sm:pl-[30px] relative">
+                                <i class="fa-solid fa-check text-secondary absolute left-0 text-sm sm:text-[15px]"></i>
+                                <span class="text-base sm:text-[17px] font-heading font-medium text-text">Early vision screening</span>
                             </li>
-                            <li class="flex items-center gap-3 pl-[30px] relative">
-                                <i class="fa-solid fa-check text-secondary absolute left-0 text-[15px]"></i>
-                                <span class="text-[17px] font-heading font-medium text-text">Squint correction specialists</span>
+                            <li class="flex items-center gap-3 pl-6 sm:pl-[30px] relative">
+                                <i class="fa-solid fa-check text-secondary absolute left-0 text-sm sm:text-[15px]"></i>
+                                <span class="text-base sm:text-[17px] font-heading font-medium text-text">Squint correction specialists</span>
                             </li>
                         </ul>
                     </div>
                     <div class="service-content hidden" data-service="2">
-                        <h3 class="text-[30px] font-heading font-semibold text-text mb-6">Lenses Transitions</h3>
-                        <p class="text-muted text-base leading-[26px] mb-6">
+                        <h3 class="text-xl sm:text-[30px] font-heading font-semibold text-text mb-4 sm:mb-6">Lenses Transitions</h3>
+                        <p class="text-muted text-sm sm:text-base leading-relaxed sm:leading-[26px] mb-4 sm:mb-6">
                             We offer a wide range of premium lens options including multifocal, toric, and photochromic lenses. Our specialists will help you choose the perfect lenses for your lifestyle and vision needs.
                         </p>
-                        <ul class="space-y-4">
-                            <li class="flex items-center gap-3 pl-[30px] relative">
-                                <i class="fa-solid fa-check text-secondary absolute left-0 text-[15px]"></i>
-                                <span class="text-[17px] font-heading font-medium text-text">Premium lens options</span>
+                        <ul class="space-y-3 sm:space-y-4">
+                            <li class="flex items-center gap-3 pl-6 sm:pl-[30px] relative">
+                                <i class="fa-solid fa-check text-secondary absolute left-0 text-sm sm:text-[15px]"></i>
+                                <span class="text-base sm:text-[17px] font-heading font-medium text-text">Premium lens options</span>
                             </li>
-                            <li class="flex items-center gap-3 pl-[30px] relative">
-                                <i class="fa-solid fa-check text-secondary absolute left-0 text-[15px]"></i>
-                                <span class="text-[17px] font-heading font-medium text-text">Custom fitting services</span>
+                            <li class="flex items-center gap-3 pl-6 sm:pl-[30px] relative">
+                                <i class="fa-solid fa-check text-secondary absolute left-0 text-sm sm:text-[15px]"></i>
+                                <span class="text-base sm:text-[17px] font-heading font-medium text-text">Custom fitting services</span>
                             </li>
-                            <li class="flex items-center gap-3 pl-[30px] relative">
-                                <i class="fa-solid fa-check text-secondary absolute left-0 text-[15px]"></i>
-                                <span class="text-[17px] font-heading font-medium text-text">Blue light protection</span>
+                            <li class="flex items-center gap-3 pl-6 sm:pl-[30px] relative">
+                                <i class="fa-solid fa-check text-secondary absolute left-0 text-sm sm:text-[15px]"></i>
+                                <span class="text-base sm:text-[17px] font-heading font-medium text-text">Blue light protection</span>
                             </li>
                         </ul>
                     </div>
                     <div class="service-content hidden" data-service="3">
-                        <h3 class="text-[30px] font-heading font-semibold text-text mb-6">Laser Eye Surgery</h3>
-                        <p class="text-muted text-base leading-[26px] mb-6">
+                        <h3 class="text-xl sm:text-[30px] font-heading font-semibold text-text mb-4 sm:mb-6">Laser Eye Surgery</h3>
+                        <p class="text-muted text-sm sm:text-base leading-relaxed sm:leading-[26px] mb-4 sm:mb-6">
                             Advanced LASIK and PRK procedures using state-of-the-art excimer laser technology. Achieve freedom from glasses and contact lenses with our precise, safe laser vision correction treatments.
                         </p>
-                        <ul class="space-y-4">
-                            <li class="flex items-center gap-3 pl-[30px] relative">
-                                <i class="fa-solid fa-check text-secondary absolute left-0 text-[15px]"></i>
-                                <span class="text-[17px] font-heading font-medium text-text">Blade-free LASIK</span>
+                        <ul class="space-y-3 sm:space-y-4">
+                            <li class="flex items-center gap-3 pl-6 sm:pl-[30px] relative">
+                                <i class="fa-solid fa-check text-secondary absolute left-0 text-sm sm:text-[15px]"></i>
+                                <span class="text-base sm:text-[17px] font-heading font-medium text-text">Blade-free LASIK</span>
                             </li>
-                            <li class="flex items-center gap-3 pl-[30px] relative">
-                                <i class="fa-solid fa-check text-secondary absolute left-0 text-[15px]"></i>
-                                <span class="text-[17px] font-heading font-medium text-text">Quick recovery time</span>
+                            <li class="flex items-center gap-3 pl-6 sm:pl-[30px] relative">
+                                <i class="fa-solid fa-check text-secondary absolute left-0 text-sm sm:text-[15px]"></i>
+                                <span class="text-base sm:text-[17px] font-heading font-medium text-text">Quick recovery time</span>
                             </li>
-                            <li class="flex items-center gap-3 pl-[30px] relative">
-                                <i class="fa-solid fa-check text-secondary absolute left-0 text-[15px]"></i>
-                                <span class="text-[17px] font-heading font-medium text-text">High success rates</span>
+                            <li class="flex items-center gap-3 pl-6 sm:pl-[30px] relative">
+                                <i class="fa-solid fa-check text-secondary absolute left-0 text-sm sm:text-[15px]"></i>
+                                <span class="text-base sm:text-[17px] font-heading font-medium text-text">High success rates</span>
                             </li>
                         </ul>
                     </div>
                     <div class="service-content hidden" data-service="4">
-                        <h3 class="text-[30px] font-heading font-semibold text-text mb-6">Vision Correction</h3>
-                        <p class="text-muted text-base leading-[26px] mb-6">
+                        <h3 class="text-xl sm:text-[30px] font-heading font-semibold text-text mb-4 sm:mb-6">Vision Correction</h3>
+                        <p class="text-muted text-sm sm:text-base leading-relaxed sm:leading-[26px] mb-4 sm:mb-6">
                             Comprehensive vision correction solutions including prescription glasses, contact lenses, and surgical options. We provide personalized treatment plans tailored to your specific vision requirements.
                         </p>
-                        <ul class="space-y-4">
-                            <li class="flex items-center gap-3 pl-[30px] relative">
-                                <i class="fa-solid fa-check text-secondary absolute left-0 text-[15px]"></i>
-                                <span class="text-[17px] font-heading font-medium text-text">Comprehensive eye exams</span>
+                        <ul class="space-y-3 sm:space-y-4">
+                            <li class="flex items-center gap-3 pl-6 sm:pl-[30px] relative">
+                                <i class="fa-solid fa-check text-secondary absolute left-0 text-sm sm:text-[15px]"></i>
+                                <span class="text-base sm:text-[17px] font-heading font-medium text-text">Comprehensive eye exams</span>
                             </li>
-                            <li class="flex items-center gap-3 pl-[30px] relative">
-                                <i class="fa-solid fa-check text-secondary absolute left-0 text-[15px]"></i>
-                                <span class="text-[17px] font-heading font-medium text-text">Custom prescriptions</span>
+                            <li class="flex items-center gap-3 pl-6 sm:pl-[30px] relative">
+                                <i class="fa-solid fa-check text-secondary absolute left-0 text-sm sm:text-[15px]"></i>
+                                <span class="text-base sm:text-[17px] font-heading font-medium text-text">Custom prescriptions</span>
                             </li>
-                            <li class="flex items-center gap-3 pl-[30px] relative">
-                                <i class="fa-solid fa-check text-secondary absolute left-0 text-[15px]"></i>
-                                <span class="text-[17px] font-heading font-medium text-text">Follow-up care</span>
+                            <li class="flex items-center gap-3 pl-6 sm:pl-[30px] relative">
+                                <i class="fa-solid fa-check text-secondary absolute left-0 text-sm sm:text-[15px]"></i>
+                                <span class="text-base sm:text-[17px] font-heading font-medium text-text">Follow-up care</span>
                             </li>
                         </ul>
                     </div>
-                    <div class="relative">
+                    <div class="relative mt-6 lg:mt-0 order-first lg:order-last">
                         <img id="service-image" src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFLFygJ9X-OwNlGS9uwZgRVy6mF5AghjD_cmxMN8jPkQ-Nb_HiAqleaSGWc-QIPfNYDtVNCTJnP8GkpCQCTi7XWmglWP5i40Smf2ZMqVr6Gp7jwv3LOIpyaxhdX_quQ31Wiz-tHueZ-KrOI=s1360-w1360-h1020-rw" 
                              alt="Service Image" 
-                             class="w-full h-[377px] object-cover rounded-[30px]">
+                             class="w-full h-[250px] sm:h-[377px] object-cover rounded-[20px] sm:rounded-[30px]">
                     </div>      
                 </div>
             </div>
@@ -537,43 +555,43 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="py-16 bg-secondary relative overflow-hidden">
+    <section class="py-12 sm:py-16 bg-secondary relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-                <div class="flex items-center gap-4 text-white fade-up">
-                    <div class="w-14 h-14 flex items-center justify-center">
-                        <i class="fa-solid fa-user-doctor text-4xl"></i>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 md:gap-12">
+                <div class="flex items-center gap-2 sm:gap-4 text-white fade-up">
+                    <div class="w-8 h-8 sm:w-14 sm:h-14 flex items-center justify-center">
+                        <i class="fa-solid fa-user-doctor text-2xl sm:text-4xl"></i>
                     </div>
                     <div>
-                        <div class="text-4xl md:text-5xl font-heading font-bold">90</div>
-                        <div class="text-sm text-white/90">Expert Doctors</div>
+                        <div class="text-2xl sm:text-4xl md:text-5xl font-heading font-bold">90</div>
+                        <div class="text-xs sm:text-sm text-white/90">Expert Doctors</div>
                     </div>
                 </div>
-                <div class="flex items-center gap-4 text-white fade-up" style="transition-delay: 0.1s;">
-                    <div class="w-14 h-14 flex items-center justify-center">
-                        <i class="fa-solid fa-glasses text-4xl"></i>
+                <div class="flex items-center gap-2 sm:gap-4 text-white fade-up" style="transition-delay: 0.1s;">
+                    <div class="w-8 h-8 sm:w-14 sm:h-14 flex items-center justify-center">
+                        <i class="fa-solid fa-glasses text-2xl sm:text-4xl"></i>
                     </div>
                     <div>
-                        <div class="text-4xl md:text-5xl font-heading font-bold">2.6</div>
-                        <div class="text-sm text-white/90">Different Services</div>
+                        <div class="text-2xl sm:text-4xl md:text-5xl font-heading font-bold">2.6</div>
+                        <div class="text-xs sm:text-sm text-white/90">Different Services</div>
                     </div>
                 </div>
-                <div class="flex items-center gap-4 text-white fade-up" style="transition-delay: 0.2s;">
-                    <div class="w-14 h-14 flex items-center justify-center">
-                        <i class="fa-solid fa-face-smile text-4xl"></i>
+                <div class="flex items-center gap-2 sm:gap-4 text-white fade-up" style="transition-delay: 0.2s;">
+                    <div class="w-8 h-8 sm:w-14 sm:h-14 flex items-center justify-center">
+                        <i class="fa-solid fa-face-smile text-2xl sm:text-4xl"></i>
                     </div>
                     <div>
-                        <div class="text-4xl md:text-5xl font-heading font-bold">35</div>
-                        <div class="text-sm text-white/90">Happy Patients</div>
+                        <div class="text-2xl sm:text-4xl md:text-5xl font-heading font-bold">35</div>
+                        <div class="text-xs sm:text-sm text-white/90">Happy Patients</div>
                     </div>
                 </div>
-                <div class="flex items-center gap-4 text-white fade-up" style="transition-delay: 0.3s;">
-                    <div class="w-14 h-14 flex items-center justify-center">
-                        <i class="fa-solid fa-award text-4xl"></i>
+                <div class="flex items-center gap-2 sm:gap-4 text-white fade-up" style="transition-delay: 0.3s;">
+                    <div class="w-8 h-8 sm:w-14 sm:h-14 flex items-center justify-center">
+                        <i class="fa-solid fa-award text-2xl sm:text-4xl"></i>
                     </div>
                     <div>
-                        <div class="text-4xl md:text-5xl font-heading font-bold">10</div>
-                        <div class="text-sm text-white/90">Awards Win</div>
+                        <div class="text-2xl sm:text-4xl md:text-5xl font-heading font-bold">10</div>
+                        <div class="text-xs sm:text-sm text-white/90">Awards Win</div>
                     </div>
                 </div>
             </div>
@@ -581,94 +599,94 @@
     </section>
 
     <!-- Team Section -->
-    <section id="team" class="py-24 bg-light relative overflow-hidden">
+    <section id="team" class="py-16 sm:py-24 bg-light relative overflow-hidden">
         <div class="absolute bottom-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-            <div class="text-center mb-16 fade-up">
+            <div class="text-center mb-12 sm:mb-16 fade-up px-4">
                 <span class="text-primary font-semibold text-sm tracking-wider uppercase">Our Team</span>
-                <h2 class="mt-4 text-4xl md:text-5xl font-heading font-bold text-text">
-                    The Most Qualified Skillful &<br>
+                <h2 class="mt-4 text-2xl sm:text-4xl md:text-5xl font-heading font-bold text-text">
+                    The Most Qualified Skillful &<br class="hidden sm:block">
                     <span class="gradient-text">Professional Staff</span>
                 </h2>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 px-4 sm:px-0">
                 <!-- Team Member 1 -->
-                <div class="team-card fade-up bg-white rounded-3xl overflow-hidden shadow-lg group">
-                    <div class="relative overflow-hidden h-80 bg-gradient-to-br from-primary/5 to-secondary/5">
+                <div class="team-card fade-up bg-white rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg group">
+                    <div class="relative overflow-hidden h-64 sm:h-80 bg-gradient-to-br from-primary/5 to-secondary/5">
                         <div class="team-img w-full h-full bg-gradient-to-br from-teal-100 to-teal-50 flex items-center justify-center transition-transform duration-500">
-                            <i class="fa-solid fa-user-doctor text-8xl text-primary/30"></i>
+                            <i class="fa-solid fa-user-doctor text-6xl sm:text-8xl text-primary/30"></i>
                         </div>
                         <div class="team-overlay absolute inset-0 bg-primary/90 opacity-0 transition-opacity duration-300 flex items-center justify-center">
-                            <div class="flex gap-3">
-                                <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary hover:bg-slate-100 transition-colors">
-                                    <i class="fa-brands fa-facebook-f"></i>
+                            <div class="flex gap-2 sm:gap-3">
+                                <a href="#" class="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full flex items-center justify-center text-primary hover:bg-slate-100 transition-colors">
+                                    <i class="fa-brands fa-facebook-f text-sm sm:text-base"></i>
                                 </a>
-                                <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary hover:bg-slate-100 transition-colors">
-                                    <i class="fa-brands fa-twitter"></i>
+                                <a href="#" class="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full flex items-center justify-center text-primary hover:bg-slate-100 transition-colors">
+                                    <i class="fa-brands fa-twitter text-sm sm:text-base"></i>
                                 </a>
-                                <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary hover:bg-slate-100 transition-colors">
-                                    <i class="fa-brands fa-linkedin-in"></i>
+                                <a href="#" class="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full flex items-center justify-center text-primary hover:bg-slate-100 transition-colors">
+                                    <i class="fa-brands fa-linkedin-in text-sm sm:text-base"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="p-6 text-center">
-                        <h3 class="text-xl font-bold text-text">Dr. B.K Nishad</h3>
-                        <p class="text-primary font-medium text-sm mt-2">Senior Ophthalmologist</p>
+                    <div class="p-4 sm:p-6 text-center">
+                        <h3 class="text-lg sm:text-xl font-bold text-text">Dr. B.K Nishad</h3>
+                        <p class="text-primary font-medium text-xs sm:text-sm mt-1 sm:mt-2">Senior Ophthalmologist</p>
                     </div>
                 </div>
 
                 <!-- Team Member 2 -->
-                <div class="team-card fade-up bg-white rounded-3xl overflow-hidden shadow-lg group" style="transition-delay: 0.1s;">
-                    <div class="relative overflow-hidden h-80 bg-gradient-to-br from-primary/5 to-secondary/5">
+                <div class="team-card fade-up bg-white rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg group" style="transition-delay: 0.1s;">
+                    <div class="relative overflow-hidden h-64 sm:h-80 bg-gradient-to-br from-primary/5 to-secondary/5">
                         <div class="team-img w-full h-full bg-gradient-to-br from-teal-100 to-teal-50 flex items-center justify-center transition-transform duration-500">
-                            <i class="fa-solid fa-user-doctor text-8xl text-primary/30"></i>
+                            <i class="fa-solid fa-user-doctor text-6xl sm:text-8xl text-primary/30"></i>
                         </div>
                         <div class="team-overlay absolute inset-0 bg-primary/90 opacity-0 transition-opacity duration-300 flex items-center justify-center">
-                            <div class="flex gap-3">
-                                <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary hover:bg-slate-100 transition-colors">
-                                    <i class="fa-brands fa-facebook-f"></i>
+                            <div class="flex gap-2 sm:gap-3">
+                                <a href="#" class="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full flex items-center justify-center text-primary hover:bg-slate-100 transition-colors">
+                                    <i class="fa-brands fa-facebook-f text-sm sm:text-base"></i>
                                 </a>
-                                <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary hover:bg-slate-100 transition-colors">
-                                    <i class="fa-brands fa-twitter"></i>
+                                <a href="#" class="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full flex items-center justify-center text-primary hover:bg-slate-100 transition-colors">
+                                    <i class="fa-brands fa-twitter text-sm sm:text-base"></i>
                                 </a>
-                                <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary hover:bg-slate-100 transition-colors">
-                                    <i class="fa-brands fa-linkedin-in"></i>
+                                <a href="#" class="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full flex items-center justify-center text-primary hover:bg-slate-100 transition-colors">
+                                    <i class="fa-brands fa-linkedin-in text-sm sm:text-base"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="p-6 text-center">
-                        <h3 class="text-xl font-bold text-text">Dr. Suman Chandrakar</h3>
-                        <p class="text-primary font-medium text-sm mt-2">Eye Surgeon</p>
+                    <div class="p-4 sm:p-6 text-center">
+                        <h3 class="text-lg sm:text-xl font-bold text-text">Dr. Suman Chandrakar</h3>
+                        <p class="text-primary font-medium text-xs sm:text-sm mt-1 sm:mt-2">Eye Surgeon</p>
                     </div>
                 </div>
 
                 <!-- Team Member 3 -->
-                <div class="team-card fade-up bg-white rounded-3xl overflow-hidden shadow-lg group" style="transition-delay: 0.2s;">
-                    <div class="relative overflow-hidden h-80 bg-gradient-to-br from-primary/5 to-secondary/5">
+                <div class="team-card fade-up bg-white rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg group" style="transition-delay: 0.2s;">
+                    <div class="relative overflow-hidden h-64 sm:h-80 bg-gradient-to-br from-primary/5 to-secondary/5">
                         <div class="team-img w-full h-full bg-gradient-to-br from-teal-100 to-teal-50 flex items-center justify-center transition-transform duration-500">
-                            <i class="fa-solid fa-user-nurse text-8xl text-primary/30"></i>
+                            <i class="fa-solid fa-user-nurse text-6xl sm:text-8xl text-primary/30"></i>
                         </div>
                         <div class="team-overlay absolute inset-0 bg-primary/90 opacity-0 transition-opacity duration-300 flex items-center justify-center">
-                            <div class="flex gap-3">
-                                <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary hover:bg-slate-100 transition-colors">
-                                    <i class="fa-brands fa-facebook-f"></i>
+                            <div class="flex gap-2 sm:gap-3">
+                                <a href="#" class="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full flex items-center justify-center text-primary hover:bg-slate-100 transition-colors">
+                                    <i class="fa-brands fa-facebook-f text-sm sm:text-base"></i>
                                 </a>
-                                <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary hover:bg-slate-100 transition-colors">
-                                    <i class="fa-brands fa-twitter"></i>
+                                <a href="#" class="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full flex items-center justify-center text-primary hover:bg-slate-100 transition-colors">
+                                    <i class="fa-brands fa-twitter text-sm sm:text-base"></i>
                                 </a>
-                                <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary hover:bg-slate-100 transition-colors">
-                                    <i class="fa-brands fa-linkedin-in"></i>
+                                <a href="#" class="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full flex items-center justify-center text-primary hover:bg-slate-100 transition-colors">
+                                    <i class="fa-brands fa-linkedin-in text-sm sm:text-base"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="p-6 text-center">
-                        <h3 class="text-xl font-bold text-text">Mr. Sonu Negi</h3>
-                        <p class="text-primary font-medium text-sm mt-2">Senior Consultant</p>
+                    <div class="p-4 sm:p-6 text-center">
+                        <h3 class="text-lg sm:text-xl font-bold text-text">Mr. Sonu Negi</h3>
+                        <p class="text-primary font-medium text-xs sm:text-sm mt-1 sm:mt-2">Senior Consultant</p>
                     </div>
                 </div>
             </div>
@@ -676,111 +694,111 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="py-24 bg-white relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+    <section id="testimonials" class="py-16 sm:py-24 bg-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-48 h-48 sm:w-96 sm:h-96 bg-primary/5 rounded-full blur-3xl"></div>
 
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-            <div class="text-center mb-16 fade-up">
+            <div class="text-center mb-10 sm:mb-16 fade-up px-4">
                 <span class="text-primary font-semibold text-sm tracking-wider uppercase">Testimonials</span>
-                <h2 class="mt-4 text-4xl md:text-5xl font-heading font-bold text-text">
-                    What Our Client Say<br>
+                <h2 class="mt-4 text-2xl sm:text-4xl md:text-5xl font-heading font-bold text-text">
+                    What Our Client Say<br class="hidden sm:block">
                     <span class="gradient-text">About Optcare</span>
                 </h2>
             </div>
 
             <!-- Testimonial Carousel -->
-            <div class="fade-up bg-light p-8 md:p-12 rounded-3xl relative">
-                <div class="text-primary text-6xl mb-6 opacity-20 text-center">
+            <div class="fade-up bg-light p-5 sm:p-8 md:p-12 rounded-2xl sm:rounded-3xl relative mx-4 sm:mx-0">
+                <div class="text-primary text-4xl sm:text-6xl mb-4 sm:mb-6 opacity-20 text-center">
                     <i class="fa-solid fa-quote-left"></i>
                 </div>
 
                 <div id="testimonial-container">
                     <!-- Testimonial 1 -->
                     <div class="testimonial-slide active text-center">
-                        <p class="text-muted text-lg md:text-xl leading-relaxed mb-8 max-w-3xl mx-auto">
+                        <p class="text-muted text-base sm:text-lg md:text-xl leading-relaxed mb-6 sm:mb-8 max-w-3xl mx-auto">
                             Adipisicing elit sed do eiusmodim tempor incid labore etax dolore magna aliqua enim minium quis veniam nostrud exercition ulamco laboris nisar aliquip commodo consequat duis aute irure dolor in reprehenderit in vol uptate velit esse.
                         </p>
-                        <div class="flex items-center justify-center gap-4">
-                            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-xl">RM</div>
+                        <div class="flex items-center justify-center gap-3 sm:gap-4">
+                            <div class="w-12 h-12 sm:w-16 sm:h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-base sm:text-xl">RM</div>
                             <div class="text-left">
-                                <div class="font-bold text-text text-lg">Rachel McAdams</div>
-                                <div class="text-muted">Patient</div>
+                                <div class="font-bold text-text text-base sm:text-lg">Rachel McAdams</div>
+                                <div class="text-muted text-sm">Patient</div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Testimonial 2 -->
                     <div class="testimonial-slide hidden text-center">
-                        <p class="text-muted text-lg md:text-xl leading-relaxed mb-8 max-w-3xl mx-auto">
+                        <p class="text-muted text-base sm:text-lg md:text-xl leading-relaxed mb-6 sm:mb-8 max-w-3xl mx-auto">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris.
                         </p>
-                        <div class="flex items-center justify-center gap-4">
-                            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-xl">JD</div>
+                        <div class="flex items-center justify-center gap-3 sm:gap-4">
+                            <div class="w-12 h-12 sm:w-16 sm:h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-base sm:text-xl">JD</div>
                             <div class="text-left">
-                                <div class="font-bold text-text text-lg">John Davidson</div>
-                                <div class="text-muted">Patient</div>
+                                <div class="font-bold text-text text-base sm:text-lg">John Davidson</div>
+                                <div class="text-muted text-sm">Patient</div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Testimonial 3 -->
                     <div class="testimonial-slide hidden text-center">
-                        <p class="text-muted text-lg md:text-xl leading-relaxed mb-8 max-w-3xl mx-auto">
+                        <p class="text-muted text-base sm:text-lg md:text-xl leading-relaxed mb-6 sm:mb-8 max-w-3xl mx-auto">
                             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt.
                         </p>
-                        <div class="flex items-center justify-center gap-4">
-                            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-xl">SK</div>
+                        <div class="flex items-center justify-center gap-3 sm:gap-4">
+                            <div class="w-12 h-12 sm:w-16 sm:h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-base sm:text-xl">SK</div>
                             <div class="text-left">
-                                <div class="font-bold text-text text-lg">Sarah Kim</div>
-                                <div class="text-muted">Patient</div>
+                                <div class="font-bold text-text text-base sm:text-lg">Sarah Kim</div>
+                                <div class="text-muted text-sm">Patient</div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Carousel Controls -->
-                <div class="flex justify-center gap-3 mt-8">
-                    <button class="testimonial-dot w-3 h-3 rounded-full bg-primary transition-all" data-slide="0"></button>
-                    <button class="testimonial-dot w-3 h-3 rounded-full bg-primary/30 transition-all" data-slide="1"></button>
-                    <button class="testimonial-dot w-3 h-3 rounded-full bg-primary/30 transition-all" data-slide="2"></button>
+                <div class="flex justify-center gap-3 mt-6 sm:mt-8">
+                    <button class="testimonial-dot w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-primary transition-all" data-slide="0"></button>
+                    <button class="testimonial-dot w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-primary/30 transition-all" data-slide="1"></button>
+                    <button class="testimonial-dot w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-primary/30 transition-all" data-slide="2"></button>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-24 bg-white relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+    <section id="contact" class="py-16 sm:py-24 bg-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-48 h-48 sm:w-96 sm:h-96 bg-primary/5 rounded-full blur-3xl"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-            <div class="grid lg:grid-cols-2 gap-16">
+            <div class="grid lg:grid-cols-2 gap-10 sm:gap-16">
                 <!-- Working Hours -->
-                <div class="fade-left space-y-8">
-                    <div>
+                <div class="fade-left space-y-6 sm:space-y-8">
+                    <div class="px-4 sm:px-0">
                         <span class="text-primary font-semibold text-sm tracking-wider uppercase">Contact Info</span>
-                        <h2 class="mt-4 text-4xl md:text-5xl font-heading font-bold text-text">Get In Touch</h2>
+                        <h2 class="mt-4 text-2xl sm:text-4xl md:text-5xl font-heading font-bold text-text">Get In Touch</h2>
                     </div>
 
                     <!-- Working Hours -->
-                    <div class="bg-light p-8 rounded-3xl">
-                        <h3 class="text-xl font-bold text-text mb-6 flex items-center gap-3">
+                    <div class="bg-light p-5 sm:p-8 rounded-2xl sm:rounded-3xl mx-4 sm:mx-0">
+                        <h3 class="text-lg sm:text-xl font-bold text-text mb-4 sm:mb-6 flex items-center gap-3">
                             <i class="fa-solid fa-clock text-primary"></i>
                             Working Hours
                         </h3>
-                        <div class="space-y-4">
-                            <div class="flex justify-between items-center py-3 border-b border-teal-100">
+                        <div class="space-y-3 sm:space-y-4 text-sm sm:text-base">
+                            <div class="flex justify-between items-center py-2 sm:py-3 border-b border-teal-100">
                                 <span class="text-muted">Monday - Friday</span>
                                 <span class="font-semibold text-text">9:00 AM - 8:00 PM</span>
                             </div>
-                            <div class="flex justify-between items-center py-3 border-b border-teal-100">
+                            <div class="flex justify-between items-center py-2 sm:py-3 border-b border-teal-100">
                                 <span class="text-muted">Saturday</span>
                                 <span class="font-semibold text-text">9:00 AM - 6:00 PM</span>
                             </div>
-                            <div class="flex justify-between items-center py-3 border-b border-teal-100">
+                            <div class="flex justify-between items-center py-2 sm:py-3 border-b border-teal-100">
                                 <span class="text-muted">Sunday</span>
                                 <span class="font-semibold text-text">10:00 AM - 2:00 PM</span>
                             </div>
-                            <div class="flex justify-between items-center py-3">
+                            <div class="flex justify-between items-center py-2 sm:py-3">
                                 <span class="text-muted">Emergency</span>
                                 <span class="font-semibold text-primary">24/7 Available</span>
                             </div>
@@ -788,43 +806,43 @@
                     </div>
 
                     <!-- Contact Info -->
-                    <div class="space-y-6">
-                        <div class="flex items-start gap-4">
-                            <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary shrink-0">
-                                <i class="fa-solid fa-location-dot text-xl"></i>
+                    <div class="space-y-4 sm:space-y-6 px-4 sm:px-0">
+                        <div class="flex items-start gap-3 sm:gap-4">
+                            <div class="w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary shrink-0">
+                                <i class="fa-solid fa-location-dot text-lg sm:text-xl"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-text">Address</h4>
-                                <p class="text-muted mt-1"> Dumri Chowk<br>Giridih Road, Jamtara - 825106</p>
+                                <h4 class="font-bold text-text text-sm sm:text-base">Address</h4>
+                                <p class="text-muted mt-1 text-sm sm:text-base"> Dumri Chowk<br>Giridih Road, Jamtara - 825106</p>
                             </div>
                         </div>
 
-                        <div class="flex items-start gap-4">
-                            <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary shrink-0">
-                                <i class="fa-solid fa-phone text-xl"></i>
+                        <div class="flex items-start gap-3 sm:gap-4">
+                            <div class="w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary shrink-0">
+                                <i class="fa-solid fa-phone text-lg sm:text-xl"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-text">Phone</h4>
-                                <p class="text-muted mt-1">+91 62033 16774<br>+91 98765 43211</p>
+                                <h4 class="font-bold text-text text-sm sm:text-base">Phone</h4>
+                                <p class="text-muted mt-1 text-sm sm:text-base">+91 62033 16774<br>+91 98765 43211</p>
                             </div>
                         </div>
 
-                        <div class="flex items-start gap-4">
-                            <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary shrink-0">
-                                <i class="fa-solid fa-envelope text-xl"></i>
+                        <div class="flex items-start gap-3 sm:gap-4">
+                            <div class="w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary shrink-0">
+                                <i class="fa-solid fa-envelope text-lg sm:text-xl"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-text">Email</h4>
-                                <p class="text-muted mt-1">info@parasnetralaya.com<br>support@parasnetralaya.com</p>
+                                <h4 class="font-bold text-text text-sm sm:text-base">Email</h4>
+                                <p class="text-muted mt-1 text-sm sm:text-base">info@parasnetralaya.com<br>support@parasnetralaya.com</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Contact Form -->
-                <div class="fade-up">
-                    <div class="bg-light p-8 md:p-10 rounded-3xl border border-teal-100">
-                        <h3 class="text-2xl font-bold text-text mb-6">Send Us a Message</h3>
+                <div class="fade-up px-4 sm:px-0">
+                    <div class="bg-light p-5 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl border border-teal-100">
+                        <h3 class="text-xl sm:text-2xl font-bold text-text mb-4 sm:mb-6">Send Us a Message</h3>
                         <form class="space-y-6" onsubmit="event.preventDefault(); alert('Thank you! We will contact you shortly to confirm your appointment at Paras Netralaya.');">
                             <div class="grid md:grid-cols-2 gap-6">
                                 <div>
@@ -858,29 +876,29 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white pt-20 pb-10 relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+    <footer class="bg-dark text-white pt-12 sm:pt-20 pb-8 sm:pb-10 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-48 h-48 sm:w-96 sm:h-96 bg-primary/5 rounded-full blur-3xl"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <!-- Map Section -->
-            <div class="mb-16 rounded-2xl overflow-hidden">
+            <div class="mb-10 sm:mb-16 rounded-xl sm:rounded-2xl overflow-hidden">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.0!2d86.65!3d24.18!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDEwJzQ4LjAiTiA4NsKwMzknMDAuMCJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin&q=Paras+Netralaya+Eye+Hospital+Giridih"
                     width="100%"
-                    height="300"
+                    height="200"
                     style="border:0;"
                     allowfullscreen=""
                     loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"
-                    class="grayscale hover:grayscale-0 transition-all duration-500">
+                    class="grayscale hover:grayscale-0 transition-all duration-500 sm:h-[300px]">
                 </iframe>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-10 sm:mb-16">
                 <!-- About -->
-                <div class="space-y-6">
-                    <h4 class="font-bold text-2xl font-heading">About</h4>
-                    <ul class="space-y-3 text-white/70 text-base">
+                <div class="space-y-4 sm:space-y-6">
+                    <h4 class="font-bold text-lg sm:text-2xl font-heading">About</h4>
+                    <ul class="space-y-2 sm:space-y-3 text-white/70 text-sm sm:text-base">
                         <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
                         <li><a href="#services" class="hover:text-white transition-colors">Our Services</a></li>
                         <li><a href="#works" class="hover:text-white transition-colors">Why Choose Us</a></li>
@@ -890,9 +908,9 @@
                 </div>
 
                 <!-- Links -->
-                <div class="space-y-6">
-                    <h4 class="font-bold text-2xl font-heading">Links</h4>
-                    <ul class="space-y-3 text-white/70 text-base">
+                <div class="space-y-4 sm:space-y-6">
+                    <h4 class="font-bold text-lg sm:text-2xl font-heading">Links</h4>
+                    <ul class="space-y-2 sm:space-y-3 text-white/70 text-sm sm:text-base">
                         <li><a href="#" class="hover:text-white transition-colors">Patients</a></li>
                         <li><a href="#" class="hover:text-white transition-colors">Visitors</a></li>
                         <li><a href="#" class="hover:text-white transition-colors">Professionals</a></li>
@@ -902,9 +920,9 @@
                 </div>
 
                 <!-- Services -->
-                <div class="space-y-6">
-                    <h4 class="font-bold text-2xl font-heading">Services</h4>
-                    <ul class="space-y-3 text-white/70 text-base">
+                <div class="space-y-4 sm:space-y-6 col-span-2 md:col-span-1">
+                    <h4 class="font-bold text-lg sm:text-2xl font-heading">Services</h4>
+                    <ul class="space-y-2 sm:space-y-3 text-white/70 text-sm sm:text-base">
                         <li><a href="#services" class="hover:text-white transition-colors">Surgical Procedures</a></li>
                         <li><a href="#services" class="hover:text-white transition-colors">Paediatric Ophthalmology</a></li>
                         <li><a href="#services" class="hover:text-white transition-colors">Lenses Transitions</a></li>
@@ -914,39 +932,39 @@
                 </div>
 
                 <!-- Contact Info -->
-                <div class="space-y-6">
-                    <h4 class="font-bold text-2xl font-heading">Contact Info</h4>
-                    <ul class="space-y-4 text-white/70 text-base">
-                        <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-location-dot text-secondary mt-1"></i>
+                <div class="space-y-4 sm:space-y-6 col-span-2 md:col-span-1">
+                    <h4 class="font-bold text-lg sm:text-2xl font-heading">Contact Info</h4>
+                    <ul class="space-y-3 sm:space-y-4 text-white/70 text-sm sm:text-base">
+                        <li class="flex items-start gap-2 sm:gap-3">
+                            <i class="fa-solid fa-location-dot text-secondary mt-1 text-sm sm:text-base"></i>
                             <span>Dumri Chowk<br>Giridih Road, Jamtara</span>
                         </li>
-                        <li class="flex items-center gap-3">
-                            <i class="fa-solid fa-phone text-secondary"></i>
+                        <li class="flex items-center gap-2 sm:gap-3">
+                            <i class="fa-solid fa-phone text-secondary text-sm sm:text-base"></i>
                             <span>+91 98765 43210</span>
                         </li>
-                        <li class="flex items-center gap-3">
-                            <i class="fa-solid fa-envelope text-secondary"></i>
+                        <li class="flex items-center gap-2 sm:gap-3">
+                            <i class="fa-solid fa-envelope text-secondary text-sm sm:text-base"></i>
                             <span>info@parasnetralaya.com</span>
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-white/50 text-base">&copy; 2026 Paras Netralaya. All rights reserved.</p>
-                <div class="flex gap-4">
-                    <a href="#" class="w-12 h-12 border border-white/15 rounded-full flex items-center justify-center hover:bg-primary hover:border-primary transition-all">
-                        <i class="fa-brands fa-facebook-f text-sm"></i>
+            <div class="border-t border-white/10 pt-6 sm:pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-white/50 text-sm sm:text-base text-center md:text-left">&copy; 2026 Paras Netralaya. All rights reserved.</p>
+                <div class="flex gap-3 sm:gap-4">
+                    <a href="#" class="w-10 h-10 sm:w-12 sm:h-12 border border-white/15 rounded-full flex items-center justify-center hover:bg-primary hover:border-primary transition-all">
+                        <i class="fa-brands fa-facebook-f text-xs sm:text-sm"></i>
                     </a>
-                    <a href="#" class="w-12 h-12 border border-white/15 rounded-full flex items-center justify-center hover:bg-primary hover:border-primary transition-all">
-                        <i class="fa-brands fa-twitter text-sm"></i>
+                    <a href="#" class="w-10 h-10 sm:w-12 sm:h-12 border border-white/15 rounded-full flex items-center justify-center hover:bg-primary hover:border-primary transition-all">
+                        <i class="fa-brands fa-twitter text-xs sm:text-sm"></i>
                     </a>
-                    <a href="#" class="w-12 h-12 border border-white/15 rounded-full flex items-center justify-center hover:bg-primary hover:border-primary transition-all">
-                        <i class="fa-brands fa-instagram text-sm"></i>
+                    <a href="#" class="w-10 h-10 sm:w-12 sm:h-12 border border-white/15 rounded-full flex items-center justify-center hover:bg-primary hover:border-primary transition-all">
+                        <i class="fa-brands fa-instagram text-xs sm:text-sm"></i>
                     </a>
-                    <a href="#" class="w-12 h-12 border border-white/15 rounded-full flex items-center justify-center hover:bg-primary hover:border-primary transition-all">
-                        <i class="fa-brands fa-linkedin-in text-sm"></i>
+                    <a href="#" class="w-10 h-10 sm:w-12 sm:h-12 border border-white/15 rounded-full flex items-center justify-center hover:bg-primary hover:border-primary transition-all">
+                        <i class="fa-brands fa-linkedin-in text-xs sm:text-sm"></i>
                     </a>
                 </div>
             </div>
@@ -954,8 +972,8 @@
     </footer>
 
     <!-- Scroll to top -->
-    <button id="scroll-top" class="fixed bottom-8 right-8 w-12 h-12 bg-primary text-white rounded-full shadow-xl opacity-0 invisible transition-all duration-300 hover:bg-secondary hover:scale-110 z-50 flex items-center justify-center">
-        <i class="fa-solid fa-arrow-up"></i>
+    <button id="scroll-top" class="fixed bottom-6 sm:bottom-8 right-6 sm:right-8 w-10 h-10 sm:w-12 sm:h-12 bg-primary text-white rounded-full shadow-xl opacity-0 invisible transition-all duration-300 hover:bg-secondary hover:scale-110 z-50 flex items-center justify-center">
+        <i class="fa-solid fa-arrow-up text-sm sm:text-base"></i>
     </button>
 
     <script>
